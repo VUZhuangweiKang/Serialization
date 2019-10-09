@@ -43,10 +43,10 @@ RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhuangwei/Desktop/TestSerial
+CMAKE_SOURCE_DIR = /home/zhuangwei/Desktop/Serialization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/TestSerial/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/Serialization/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TestSerial.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/TestSerial.dir/flags.make
 
 CMakeFiles/TestSerial.dir/msgpack_main.cpp.o: CMakeFiles/TestSerial.dir/flags.make
 CMakeFiles/TestSerial.dir/msgpack_main.cpp.o: ../msgpack_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestSerial.dir/msgpack_main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestSerial.dir/msgpack_main.cpp.o -c /home/zhuangwei/Desktop/TestSerial/msgpack_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestSerial.dir/msgpack_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestSerial.dir/msgpack_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/msgpack_main.cpp
 
 CMakeFiles/TestSerial.dir/msgpack_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestSerial.dir/msgpack_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/TestSerial/msgpack_main.cpp > CMakeFiles/TestSerial.dir/msgpack_main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/msgpack_main.cpp > CMakeFiles/TestSerial.dir/msgpack_main.cpp.i
 
 CMakeFiles/TestSerial.dir/msgpack_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestSerial.dir/msgpack_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/TestSerial/msgpack_main.cpp -o CMakeFiles/TestSerial.dir/msgpack_main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/msgpack_main.cpp -o CMakeFiles/TestSerial.dir/msgpack_main.cpp.s
 
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.o: CMakeFiles/TestSerial.dir/flags.make
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.o: ../protobuf_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TestSerial.dir/protobuf_main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestSerial.dir/protobuf_main.cpp.o -c /home/zhuangwei/Desktop/TestSerial/protobuf_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TestSerial.dir/protobuf_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestSerial.dir/protobuf_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/protobuf_main.cpp
 
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestSerial.dir/protobuf_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/TestSerial/protobuf_main.cpp > CMakeFiles/TestSerial.dir/protobuf_main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/protobuf_main.cpp > CMakeFiles/TestSerial.dir/protobuf_main.cpp.i
 
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestSerial.dir/protobuf_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/TestSerial/protobuf_main.cpp -o CMakeFiles/TestSerial.dir/protobuf_main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/protobuf_main.cpp -o CMakeFiles/TestSerial.dir/protobuf_main.cpp.s
 
 CMakeFiles/TestSerial.dir/utl.cpp.o: CMakeFiles/TestSerial.dir/flags.make
 CMakeFiles/TestSerial.dir/utl.cpp.o: ../utl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TestSerial.dir/utl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestSerial.dir/utl.cpp.o -c /home/zhuangwei/Desktop/TestSerial/utl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TestSerial.dir/utl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestSerial.dir/utl.cpp.o -c /home/zhuangwei/Desktop/Serialization/utl.cpp
 
 CMakeFiles/TestSerial.dir/utl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestSerial.dir/utl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/TestSerial/utl.cpp > CMakeFiles/TestSerial.dir/utl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/utl.cpp > CMakeFiles/TestSerial.dir/utl.cpp.i
 
 CMakeFiles/TestSerial.dir/utl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestSerial.dir/utl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/TestSerial/utl.cpp -o CMakeFiles/TestSerial.dir/utl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/utl.cpp -o CMakeFiles/TestSerial.dir/utl.cpp.s
 
 # Object files for target TestSerial
 TestSerial_OBJECTS = \
@@ -110,7 +110,7 @@ TestSerial: CMakeFiles/TestSerial.dir/protobuf_main.cpp.o
 TestSerial: CMakeFiles/TestSerial.dir/utl.cpp.o
 TestSerial: CMakeFiles/TestSerial.dir/build.make
 TestSerial: CMakeFiles/TestSerial.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TestSerial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TestSerial"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestSerial.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/TestSerial.dir/clean:
 .PHONY : CMakeFiles/TestSerial.dir/clean
 
 CMakeFiles/TestSerial.dir/depend:
-	cd /home/zhuangwei/Desktop/TestSerial/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zhuangwei/Desktop/TestSerial /home/zhuangwei/Desktop/TestSerial /home/zhuangwei/Desktop/TestSerial/cmake-build-debug /home/zhuangwei/Desktop/TestSerial/cmake-build-debug /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/TestSerial.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zhuangwei/Desktop/Serialization/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zhuangwei/Desktop/Serialization /home/zhuangwei/Desktop/Serialization /home/zhuangwei/Desktop/Serialization/cmake-build-debug /home/zhuangwei/Desktop/Serialization/cmake-build-debug /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/TestSerial.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TestSerial.dir/depend
 

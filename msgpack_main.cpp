@@ -10,7 +10,7 @@ TestCustomType initStruct(int32_t msgID) {
         customType.test_octet[i] = (octet) i;
     }
 
-    sprintf(customType.test_string.test_string, "Hello world! %d", msgID);
+    sprintf(customType.test_string.test_string, "Hello world!");
 
     for (int j = 0; j < SIZE_TEST_SEQ; ++j) {
         customType.test_long_seq.test_long_seq[j] = customType.test_long;
@@ -28,7 +28,7 @@ TestCustomType initStruct(int32_t msgID) {
     return customType;
 }
 
-int ___main() {
+int main() {
     vector<float> serial_time(NUM_INTER), deserial_time(NUM_INTER);
 
     for (int i = 0; i < NUM_INTER; ++i) {

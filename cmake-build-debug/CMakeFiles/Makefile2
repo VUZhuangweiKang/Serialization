@@ -44,21 +44,23 @@ RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhuangwei/Desktop/TestSerial
+CMAKE_SOURCE_DIR = /home/zhuangwei/Desktop/Serialization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/TestSerial/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/Serialization/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TestSerial.dir/all
+all: CMakeFiles/msgpack.dir/all
+all: CMakeFiles/protobuf.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TestSerial.dir/clean
+clean: CMakeFiles/msgpack.dir/clean
+clean: CMakeFiles/protobuf.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +70,58 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestSerial.dir
+# Target rules for target CMakeFiles/msgpack.dir
 
 # All Build rule for target.
-CMakeFiles/TestSerial.dir/all:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/depend
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target TestSerial"
-.PHONY : CMakeFiles/TestSerial.dir/all
+CMakeFiles/msgpack.dir/all:
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/depend
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target msgpack"
+.PHONY : CMakeFiles/msgpack.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestSerial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestSerial.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/TestSerial.dir/rule
+CMakeFiles/msgpack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/msgpack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/msgpack.dir/rule
 
 # Convenience name for target.
-TestSerial: CMakeFiles/TestSerial.dir/rule
+msgpack: CMakeFiles/msgpack.dir/rule
 
-.PHONY : TestSerial
+.PHONY : msgpack
 
 # clean rule for target.
-CMakeFiles/TestSerial.dir/clean:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/clean
-.PHONY : CMakeFiles/TestSerial.dir/clean
+CMakeFiles/msgpack.dir/clean:
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/clean
+.PHONY : CMakeFiles/msgpack.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/protobuf.dir
+
+# All Build rule for target.
+CMakeFiles/protobuf.dir/all:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/depend
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target protobuf"
+.PHONY : CMakeFiles/protobuf.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/protobuf.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/protobuf.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/protobuf.dir/rule
+
+# Convenience name for target.
+protobuf: CMakeFiles/protobuf.dir/rule
+
+.PHONY : protobuf
+
+# clean rule for target.
+CMakeFiles/protobuf.dir/clean:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/clean
+.PHONY : CMakeFiles/protobuf.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

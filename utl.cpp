@@ -9,7 +9,7 @@ using namespace std;
 #define SYSTEM_TIMESPEC struct timespec
 #define NUM_INTER 10000
 
-const long SIZE_TEST_STR = 32;
+const long SIZE_TEST_STR = 16;
 const long SIZE_TEST_SEQ = 128;
 const long SIZE_TEST_ARRAY_SEQ = 4;
 const long SIZE_TEST_SEQ_ARRAY_SEQ = 4;

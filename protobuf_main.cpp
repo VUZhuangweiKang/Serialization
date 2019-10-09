@@ -2,7 +2,7 @@
 // Created by zhuangwei on 10/8/19.
 //
 #include "utl.cpp"
-#include "ProtobufCustomType.pb.h"
+#include "ProtobufCustomType.pb.cc"
 using namespace std;
 using namespace myprotobuf;
 

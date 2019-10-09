@@ -10,11 +10,11 @@ sudo make install
 
 
 # install protobuf
-sudo apt-get install libprotobuf-dev protobuf-compiler
-wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz
-tar -xzvf protobuf-all-3.6.1.tar.gz
-cd protobuf-all-3.6.1.tar.gz
-./configure CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
+sudo apt-get install autoconf automake libtool curl make g++ unzip -y
+git clone https://github.com/google/protobuf.git
+cd protobuf
+git submodule update --init --recursive
+./autogen.sh && ./configure
 make
 make check
 sudo make install

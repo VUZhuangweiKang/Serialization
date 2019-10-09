@@ -5,6 +5,7 @@ CMakeFiles/TestSerial.dir/msgpack_main.cpp.o: ../MsgPackCustomType.h
 CMakeFiles/TestSerial.dir/msgpack_main.cpp.o: ../msgpack_main.cpp
 CMakeFiles/TestSerial.dir/msgpack_main.cpp.o: ../utl.cpp
 
+CMakeFiles/TestSerial.dir/protobuf_main.cpp.o: ../ProtobufCustomType.pb.cc
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.o: ../ProtobufCustomType.pb.h
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.o: ../protobuf_main.cpp
 CMakeFiles/TestSerial.dir/protobuf_main.cpp.o: ../utl.cpp

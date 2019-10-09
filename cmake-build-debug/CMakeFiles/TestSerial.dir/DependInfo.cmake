@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zhuangwei/Desktop/TestSerial/msgpack_main.cpp" "/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/TestSerial.dir/msgpack_main.cpp.o"
-  "/home/zhuangwei/Desktop/TestSerial/protobuf_main.cpp" "/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/TestSerial.dir/protobuf_main.cpp.o"
-  "/home/zhuangwei/Desktop/TestSerial/utl.cpp" "/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/TestSerial.dir/utl.cpp.o"
+  "/home/zhuangwei/Desktop/Serialization/msgpack_main.cpp" "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/TestSerial.dir/msgpack_main.cpp.o"
+  "/home/zhuangwei/Desktop/Serialization/protobuf_main.cpp" "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/TestSerial.dir/protobuf_main.cpp.o"
+  "/home/zhuangwei/Desktop/Serialization/utl.cpp" "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/TestSerial.dir/utl.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

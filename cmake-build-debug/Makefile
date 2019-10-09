@@ -48,10 +48,10 @@ RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhuangwei/Desktop/TestSerial
+CMAKE_SOURCE_DIR = /home/zhuangwei/Desktop/Serialization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/TestSerial/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/Serialization/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestSerial
+# Target rules for targets named msgpack
 
 # Build rule for target.
-TestSerial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestSerial
-.PHONY : TestSerial
+msgpack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 msgpack
+.PHONY : msgpack
 
 # fast build rule for target.
-TestSerial/fast:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/build
-.PHONY : TestSerial/fast
+msgpack/fast:
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/build
+.PHONY : msgpack/fast
+
+#=============================================================================
+# Target rules for targets named protobuf
+
+# Build rule for target.
+protobuf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf
+.PHONY : protobuf
+
+# fast build rule for target.
+protobuf/fast:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/build
+.PHONY : protobuf/fast
 
 msgpack_main.o: msgpack_main.cpp.o
 
@@ -129,7 +142,7 @@ msgpack_main.o: msgpack_main.cpp.o
 
 # target to build an object file
 msgpack_main.cpp.o:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/msgpack_main.cpp.o
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/msgpack_main.cpp.o
 .PHONY : msgpack_main.cpp.o
 
 msgpack_main.i: msgpack_main.cpp.i
@@ -138,7 +151,7 @@ msgpack_main.i: msgpack_main.cpp.i
 
 # target to preprocess a source file
 msgpack_main.cpp.i:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/msgpack_main.cpp.i
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/msgpack_main.cpp.i
 .PHONY : msgpack_main.cpp.i
 
 msgpack_main.s: msgpack_main.cpp.s
@@ -147,7 +160,7 @@ msgpack_main.s: msgpack_main.cpp.s
 
 # target to generate assembly for a file
 msgpack_main.cpp.s:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/msgpack_main.cpp.s
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/msgpack_main.cpp.s
 .PHONY : msgpack_main.cpp.s
 
 protobuf_main.o: protobuf_main.cpp.o
@@ -156,7 +169,7 @@ protobuf_main.o: protobuf_main.cpp.o
 
 # target to build an object file
 protobuf_main.cpp.o:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/protobuf_main.cpp.o
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/protobuf_main.cpp.o
 .PHONY : protobuf_main.cpp.o
 
 protobuf_main.i: protobuf_main.cpp.i
@@ -165,7 +178,7 @@ protobuf_main.i: protobuf_main.cpp.i
 
 # target to preprocess a source file
 protobuf_main.cpp.i:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/protobuf_main.cpp.i
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/protobuf_main.cpp.i
 .PHONY : protobuf_main.cpp.i
 
 protobuf_main.s: protobuf_main.cpp.s
@@ -174,35 +187,8 @@ protobuf_main.s: protobuf_main.cpp.s
 
 # target to generate assembly for a file
 protobuf_main.cpp.s:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/protobuf_main.cpp.s
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/protobuf_main.cpp.s
 .PHONY : protobuf_main.cpp.s
-
-utl.o: utl.cpp.o
-
-.PHONY : utl.o
-
-# target to build an object file
-utl.cpp.o:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/utl.cpp.o
-.PHONY : utl.cpp.o
-
-utl.i: utl.cpp.i
-
-.PHONY : utl.i
-
-# target to preprocess a source file
-utl.cpp.i:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/utl.cpp.i
-.PHONY : utl.cpp.i
-
-utl.s: utl.cpp.s
-
-.PHONY : utl.s
-
-# target to generate assembly for a file
-utl.cpp.s:
-	$(MAKE) -f CMakeFiles/TestSerial.dir/build.make CMakeFiles/TestSerial.dir/utl.cpp.s
-.PHONY : utl.cpp.s
 
 # Help Target
 help:
@@ -211,17 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... TestSerial"
 	@echo "... edit_cache"
+	@echo "... msgpack"
+	@echo "... protobuf"
 	@echo "... msgpack_main.o"
 	@echo "... msgpack_main.i"
 	@echo "... msgpack_main.s"
 	@echo "... protobuf_main.o"
 	@echo "... protobuf_main.i"
 	@echo "... protobuf_main.s"
-	@echo "... utl.o"
-	@echo "... utl.i"
-	@echo "... utl.s"
 .PHONY : help
 
 

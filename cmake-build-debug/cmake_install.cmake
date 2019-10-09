@@ -1,4 +1,4 @@
-# Install script for directory: /home/zhuangwei/Desktop/TestSerial
+# Install script for directory: /home/zhuangwei/Desktop/Serialization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
