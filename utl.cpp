@@ -20,7 +20,6 @@ double currentTimeInNanoSeconds() {
     SYSTEM_TIMESPEC tv;
     clock_gettime(CLOCK_REALTIME, &tv);
 
-    double time =
-            tv.tv_sec * pow(10, 9) + tv.tv_nsec;
+    double time = tv.tv_sec * 1e9 + tv.tv_nsec;
     return time;
 }
