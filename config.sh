@@ -1,13 +1,11 @@
 #!/bin/bash
 
 # install message pack
-
 git clone https://github.com/msgpack/msgpack-c.git
 cd msgpack-c
 cmake .
 make
 sudo make install
-
 
 # install protobuf
 sudo apt-get install autoconf automake libtool curl make g++ unzip -y

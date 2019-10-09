@@ -2,7 +2,7 @@
 // Created by zhuangwei on 10/8/19.
 //
 #include "utl.cpp"
-#include "ProtobufCustomType.pb.cc"
+#include "ProtobufCustomType.pb.h"
 using namespace std;
 using namespace myprotobuf;
 
@@ -15,41 +15,32 @@ TestCustomType initStructProto(int32_t msgID) {
         octet->set_octet(to_string(i).c_str());
     }
 
-    char str[SIZE_TEST_STR];
-    sprintf(str, "Hello world! %d", msgID);
-    StringTest str_test = testCustomType.test_string();
-    str_test.add_char_mem(str);
+    string str = "Hello world!";
+    testCustomType.mutable_test_string()->set_str_mem(str);
 
-    LongSeqTest long_seq = testCustomType.test_long_seq();
-    StringSeqTest str_seq = testCustomType.test_string_seq();
-    DoubleSeqTest double_seq = testCustomType.test_double_seq();
-
-    for (int m = 0; m < SIZE_TEST_SEQ; ++m) {
-        long_seq.add_long_mem((int32_t)m);
-        StringTest* temp = str_seq.add_string_mem();
-        temp->add_char_mem(str);
-        double_seq.add_double_mem((double)m);
+    for (int32_t m = 0; m < SIZE_TEST_SEQ; ++m) {
+        testCustomType.mutable_test_long_seq()->add_long_mem(m);
+        testCustomType.mutable_test_string_seq()->add_string_mem()->set_str_mem(str);
+        testCustomType.mutable_test_double_seq()->add_double_mem((double)m);
     }
 
-    ArrayLongSeqTest array_long_seq = testCustomType.test_array_long_seq();
-    SeqArrayLongSeqTest seq_array_long_seq = testCustomType.seq_array_long_seq_test();
-
-    for (int j = 0; j < SIZE_TEST_ARRAY_SEQ; ++j) {
-        LongSeqTest* temp = array_long_seq.add_array_long_seq_mem();
-        for (int i = 0; i < SIZE_TEST_SEQ; ++i) {
-            temp->add_long_mem((int32_t)i);
+    for (int32_t j= 0; j < SIZE_TEST_ARRAY_SEQ; ++j) {
+        LongSeqTest *long_seq = testCustomType.mutable_test_array_long_seq()->add_long_seq_mem();
+        for (int32_t i = 0; i < SIZE_TEST_SEQ; ++i) {
+            long_seq->add_long_mem(i);
         }
     }
 
     for (int k = 0; k < SIZE_TEST_SEQ_ARRAY_SEQ; ++k) {
-        ArrayLongSeqTest* temp1 = seq_array_long_seq.add_seq_array_long_seq_mem();
-        for (int j = 0; j < SIZE_TEST_ARRAY_SEQ; ++j) {
-            LongSeqTest* temp = temp1->add_array_long_seq_mem();
-            for (int i = 0; i < SIZE_TEST_SEQ; ++i) {
-                temp->add_long_mem((int32_t)i);
+        ArrayLongSeqTest *arrayLongSeqTest = testCustomType.mutable_seq_array_long_seq_test()->add_array_long_seq_mem();
+        for (int32_t j= 0; j < SIZE_TEST_ARRAY_SEQ; ++j) {
+            LongSeqTest *long_seq = arrayLongSeqTest->add_long_seq_mem();
+            for (int32_t i = 0; i < SIZE_TEST_SEQ; ++i) {
+                long_seq->add_long_mem(i);
             }
         }
     }
+
     return testCustomType;
 }
 
@@ -71,22 +62,19 @@ int main() {
         long long end_deserial = currentTimeInNanoSeconds();
         deserial_time.push_back((end_deserial - start_deserial)/1e3); // convert nano-sec to micro-sec
 
-        /*
-        TestCustomType my_deserialized_struct = msg.get().as<TestCustomType>();
-        cout << "Msg " << i << " / Length: " << sizeof(my_deserialized_struct) << endl;
-        cout << "Long: " << sizeof(my_deserialized_struct.test_long) << endl
-            << "Octet: " << sizeof(my_deserialized_struct.test_octet) << endl
-            << "LongSeq: " << sizeof(my_deserialized_struct.test_long_seq) << endl
-            << "String: " << sizeof(my_deserialized_struct.test_string) << endl
-            << "StringSeq: " << sizeof(my_deserialized_struct.test_string_seq) << endl
-            << "DoubleSeq: " << sizeof(my_deserialized_struct.test_double_seq) << endl
-            << "ArrayLongSeq: " << sizeof(my_deserialized_struct.test_array_long_seq) << endl
-            << "SeqArrayLongSeq: " << sizeof(my_deserialized_struct.seq_array_long_seq_test)
-            << endl;
-        */
-
-        if(i == 0)
-            cout << "Length: " << sizeof(testCustomType) << " bytes" << endl;
+        if(i == 0){
+            cout << "Long: " << sizeof(testCustomType.test_long()) << endl
+                 << "Octet: " << testCustomType.test_octet_size() << endl
+                 << "LongSeq: " << testCustomType.test_long_seq().ByteSizeLong() << endl
+                 << "String: " << testCustomType.test_string().ByteSizeLong() << endl
+                 << "StringSeq: " << testCustomType.test_string_seq().ByteSizeLong() << endl
+                 << "DoubleSeq: " << testCustomType.test_double_seq().ByteSizeLong() << endl
+                 << "ArrayLongSeq: " << testCustomType.test_array_long_seq().ByteSizeLong() << endl
+                 << "SeqArrayLongSeq: " << testCustomType.seq_array_long_seq_test().ByteSizeLong()
+                 << endl;
+            cout << "===========================" << endl;
+            cout << "Length: " << testCustomType.ByteSizeLong() << " bytes" << endl;
+        }
     }
 
     cout << "===========================" << endl;

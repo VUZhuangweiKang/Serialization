@@ -136,6 +136,33 @@ protobuf/fast:
 	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/build
 .PHONY : protobuf/fast
 
+ProtobufCustomType.pb.o: ProtobufCustomType.pb.cc.o
+
+.PHONY : ProtobufCustomType.pb.o
+
+# target to build an object file
+ProtobufCustomType.pb.cc.o:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o
+.PHONY : ProtobufCustomType.pb.cc.o
+
+ProtobufCustomType.pb.i: ProtobufCustomType.pb.cc.i
+
+.PHONY : ProtobufCustomType.pb.i
+
+# target to preprocess a source file
+ProtobufCustomType.pb.cc.i:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.i
+.PHONY : ProtobufCustomType.pb.cc.i
+
+ProtobufCustomType.pb.s: ProtobufCustomType.pb.cc.s
+
+.PHONY : ProtobufCustomType.pb.s
+
+# target to generate assembly for a file
+ProtobufCustomType.pb.cc.s:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.s
+.PHONY : ProtobufCustomType.pb.cc.s
+
 msgpack_main.o: msgpack_main.cpp.o
 
 .PHONY : msgpack_main.o
@@ -200,6 +227,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... msgpack"
 	@echo "... protobuf"
+	@echo "... ProtobufCustomType.pb.o"
+	@echo "... ProtobufCustomType.pb.i"
+	@echo "... ProtobufCustomType.pb.s"
 	@echo "... msgpack_main.o"
 	@echo "... msgpack_main.i"
 	@echo "... msgpack_main.s"

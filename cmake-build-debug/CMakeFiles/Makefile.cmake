@@ -22,10 +22,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeLanguageInformation.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckIncludeFile.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckLibraryExists.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-C.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-CXX.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageMessage.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindProtobuf.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindThreads.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-C.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -33,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/ProcessorCount.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:

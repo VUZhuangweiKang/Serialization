@@ -10,7 +10,7 @@ TestCustomType initStruct(int32_t msgID) {
         customType.test_octet[i] = (octet) i;
     }
 
-    sprintf(customType.test_string.test_string, "Hello world!");
+    customType.test_string.test_string = "Hello world!";
 
     for (int j = 0; j < SIZE_TEST_SEQ; ++j) {
         customType.test_long_seq.test_long_seq[j] = customType.test_long;
@@ -46,22 +46,20 @@ int main() {
         long long end_deserial = currentTimeInNanoSeconds();
         deserial_time.push_back((end_deserial - start_deserial)/1e3); // convert nano-sec to micro-sec
 
-        /*
-        TestCustomType my_deserialized_struct = msg.get().as<TestCustomType>();
-        cout << "Msg " << i << " / Length: " << sizeof(my_deserialized_struct) << endl;
-        cout << "Long: " << sizeof(my_deserialized_struct.test_long) << endl
-            << "Octet: " << sizeof(my_deserialized_struct.test_octet) << endl
-            << "LongSeq: " << sizeof(my_deserialized_struct.test_long_seq) << endl
-            << "String: " << sizeof(my_deserialized_struct.test_string) << endl
-            << "StringSeq: " << sizeof(my_deserialized_struct.test_string_seq) << endl
-            << "DoubleSeq: " << sizeof(my_deserialized_struct.test_double_seq) << endl
-            << "ArrayLongSeq: " << sizeof(my_deserialized_struct.test_array_long_seq) << endl
-            << "SeqArrayLongSeq: " << sizeof(my_deserialized_struct.seq_array_long_seq_test)
-            << endl;
-        */
-
-        if(i == 0)
+        if(i == 0){
+            TestCustomType my_deserialized_struct = msg.get().as<TestCustomType>();
+            cout << "Long: " << sizeof(my_deserialized_struct.test_long) << endl
+                 << "Octet: " << sizeof(my_deserialized_struct.test_octet) << endl
+                 << "LongSeq: " << sizeof(my_deserialized_struct.test_long_seq) << endl
+                 << "String: " << sizeof(my_deserialized_struct.test_string) << endl
+                 << "StringSeq: " << sizeof(my_deserialized_struct.test_string_seq) << endl
+                 << "DoubleSeq: " << sizeof(my_deserialized_struct.test_double_seq) << endl
+                 << "ArrayLongSeq: " << sizeof(my_deserialized_struct.test_array_long_seq) << endl
+                 << "SeqArrayLongSeq: " << sizeof(my_deserialized_struct.seq_array_long_seq_test)
+                 << endl;
+            cout << "===========================" << endl;
             cout << "Length: " << sizeof(my_struct) << " bytes" << endl;
+        }
 
         sbuf.clear(); // clear buffer
     }

@@ -14,7 +14,7 @@ message DoubleSeqTest {
 }
 
 message StringTest {
-    repeated bytes char_mem = 1;
+    string str_mem = 1;
 }
 
 message StringSeqTest {
@@ -22,11 +22,11 @@ message StringSeqTest {
 }
 
 message ArrayLongSeqTest {
-    repeated LongSeqTest array_long_seq_mem = 1;
+    repeated LongSeqTest long_seq_mem = 1;
 }
 
 message SeqArrayLongSeqTest {
-    repeated ArrayLongSeqTest seq_array_long_seq_mem = 1;
+    repeated ArrayLongSeqTest array_long_seq_mem = 1;
 }
 
 message TestCustomType {
