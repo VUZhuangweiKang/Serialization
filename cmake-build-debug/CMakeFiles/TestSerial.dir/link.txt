@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TestSerial.dir/msgpack_main.cpp.o CMakeFiles/TestSerial.dir/protobuf_main.cpp.o CMakeFiles/TestSerial.dir/utl.cpp.o  -o TestSerial 

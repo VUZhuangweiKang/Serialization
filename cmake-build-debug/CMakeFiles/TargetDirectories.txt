@@ -1,0 +1,3 @@
+/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/TestSerial.dir
+/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/edit_cache.dir

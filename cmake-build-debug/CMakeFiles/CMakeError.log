@@ -1,0 +1,400 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/nm: CMakeCCompilerId.c: File format not recognized
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+/usr/bin/nm: invalid option -- 'c'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+/usr/bin/nm: CMakeCCompilerId.c: File format not recognized
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+/usr/bin/nm: invalid option -- '_'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+/usr/bin/nm: invalid option -- 'm'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/nm: CMakeCCompilerId.c: File format not recognized
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+/usr/bin/nm: invalid option -- 'c'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+/usr/bin/nm: CMakeCCompilerId.c: File format not recognized
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+/usr/bin/nm: invalid option -- '_'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+/usr/bin/nm: invalid option -- 'm'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+/usr/bin/nm: 'a.out': No such file
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+/usr/bin/nm: 'a.out': No such file
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_65f86/fast && /usr/bin/make -f CMakeFiles/cmTC_65f86.dir/build.make CMakeFiles/cmTC_65f86.dir/build
+make[1]: Entering directory '/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65f86.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_65f86.dir/testCCompiler.c.o   -c /home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+/usr/bin/nm: invalid option -- 'c'
+Usage: /usr/bin/nm [option(s)] [file(s)]
+ List symbols in [file(s)] (a.out by default).
+ The options are:
+  -a, --debug-syms       Display debugger-only symbols
+  -A, --print-file-name  Print name of the input file before every symbol
+  -B                     Same as --format=bsd
+  -C, --demangle[=STYLE] Decode low-level symbol names into user-level names
+                          The STYLE, if specified, can be `auto' (the default),
+                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
+                          or `gnat'
+      --no-demangle      Do not demangle low-level symbol names
+  -D, --dynamic          Display dynamic symbols instead of normal symbols
+      --defined-only     Display only defined symbols
+  -e                     (ignored)
+  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be `bsd',
+                           `sysv' or `posix'.  The default is `bsd'
+  -g, --extern-only      Display only external symbols
+  -l, --line-numbers     Use debugging information to find a filename and
+                           line number for each symbol
+  -n, --numeric-sort     Sort symbols numerically by address
+  -o                     Same as -A
+  -p, --no-sort          Do not sort the symbols
+  -P, --portability      Same as --format=posix
+  -r, --reverse-sort     Reverse the sense of the sort
+      --plugin NAME      Load the specified plugin
+  -S, --print-size       Print size of defined symbols
+  -s, --print-armap      Include index for symbols from archive members
+      --size-sort        Sort symbols by size
+      --special-syms     Include special symbols in the output
+      --synthetic        Display synthetic symbols as well
+  -t, --radix=RADIX      Use RADIX for printing symbol values
+      --target=BFDNAME   Specify the target object format as BFDNAME
+  -u, --undefined-only   Display only undefined symbols
+      --with-symbol-versions  Display version strings after symbol names
+  -X 32_64               (ignored)
+  @FILE                  Read options from FILE
+  -h, --help             Display this information
+  -V, --version          Display this program's version number
+
+/usr/bin/nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+CMakeFiles/cmTC_65f86.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_65f86.dir/testCCompiler.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_65f86.dir/testCCompiler.c.o] Error 1
+make[1]: Leaving directory '/home/zhuangwei/Desktop/TestSerial/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_65f86/fast' failed
+make: *** [cmTC_65f86/fast] Error 2
+
+
+
