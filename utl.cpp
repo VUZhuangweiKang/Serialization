@@ -8,7 +8,7 @@
 #include <unistd.h>
 using namespace std;
 #define SYSTEM_TIMESPEC struct timespec
-#define NUM_INTER 10000
+#define NUM_INTER 10
 
 const long SIZE_TEST_STR = 16;
 const long SIZE_TEST_SEQ = 128;

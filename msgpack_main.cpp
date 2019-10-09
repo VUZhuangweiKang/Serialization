@@ -29,7 +29,7 @@ TestCustomType initStruct(int32_t msgID) {
 }
 
 int main() {
-    vector<double> serial_time, deserial_time;
+    double serial_time = 0.0, deserial_time = 0.0;
 
     for (int i = 0; i < NUM_INTER; ++i) {
         TestCustomType my_struct = initStruct(i);
@@ -38,13 +38,13 @@ int main() {
         double start_serial = currentTimeInNanoSeconds();
         pack(sbuf, my_struct);
         double end_serial = currentTimeInNanoSeconds();
-        serial_time.push_back((end_serial - start_serial)/1e3); // convert nano-sec to micro-sec
+        serial_time += (end_serial - start_serial)/1e3; // convert nano-sec to micro-sec
 
         unpacked msg; // deserialize message
         double start_deserial = currentTimeInNanoSeconds();
         unpack(&msg, sbuf.data(), sbuf.size());
         double end_deserial = currentTimeInNanoSeconds();
-        deserial_time.push_back((end_deserial - start_deserial)/1e3); // convert nano-sec to micro-sec
+        deserial_time += (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec
 
         if(i == 0){
             TestCustomType my_deserialized_struct = msg.get().as<TestCustomType>();
@@ -65,8 +65,8 @@ int main() {
     }
 
     cout << "===========================" << endl;
-    double avg_serial_time = accumulate(serial_time.begin(), serial_time.end(), 0.0)/NUM_INTER;
-    double avg_deserial_time = accumulate(deserial_time.begin(), deserial_time.end(), 0.0)/NUM_INTER;
+    double avg_serial_time = serial_time/NUM_INTER;
+    double avg_deserial_time = deserial_time/NUM_INTER;
 
     cout << "Serialization / Deserialization : " << avg_serial_time << " / " << avg_deserial_time << " us" << endl;
 

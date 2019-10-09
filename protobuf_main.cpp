@@ -49,20 +49,20 @@ TestCustomType initStructProto(int32_t msgID) {
 int main() {
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-    vector<float> serial_time(NUM_INTER), deserial_time(NUM_INTER);
+    double serial_time = 0.0, deserial_time = 0.0;
 
     for (int32_t i = 0; i < NUM_INTER; ++i) {
         TestCustomType testCustomType = initStructProto(i);
 
-        long long start_serial = currentTimeInNanoSeconds();
+        double start_serial = currentTimeInNanoSeconds();
         string proto_serialized_str = testCustomType.SerializeAsString();
-        long long end_serial = currentTimeInNanoSeconds();
-        serial_time.push_back((end_serial - start_serial)/1e3); // convert nano-sec to micro-sec
+        double end_serial = currentTimeInNanoSeconds();
+        serial_time += (end_serial - start_serial)/1e3; // convert nano-sec to micro-sec
 
-        long long start_deserial = currentTimeInNanoSeconds();
+        double start_deserial = currentTimeInNanoSeconds();
         testCustomType.ParseFromString(proto_serialized_str);
-        long long end_deserial = currentTimeInNanoSeconds();
-        deserial_time.push_back((end_deserial - start_deserial)/1e3); // convert nano-sec to micro-sec
+        double end_deserial = currentTimeInNanoSeconds();
+        deserial_time += (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec
 
         if(i == 0){
             cout << "Long: " << sizeof(testCustomType.test_long()) << endl
@@ -80,8 +80,8 @@ int main() {
     }
 
     cout << "===========================" << endl;
-    double avg_serial_time = accumulate(serial_time.begin(), serial_time.end(), 0.0)/serial_time.size();
-    double avg_deserial_time = accumulate(deserial_time.begin(), deserial_time.end(), 0.0)/deserial_time.size();
+    double avg_serial_time = serial_time/NUM_INTER;
+    double avg_deserial_time = deserial_time/NUM_INTER;
 
     cout << "Serialization / Deserialization : " << avg_serial_time << " / " << avg_deserial_time << " us" << endl;
 
