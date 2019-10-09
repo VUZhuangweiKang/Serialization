@@ -16,11 +16,11 @@ const long SIZE_TEST_ARRAY_SEQ = 4;
 const long SIZE_TEST_SEQ_ARRAY_SEQ = 4;
 const long SIZE_OCTET_ARRAY = 360;
 
-long long currentTimeInNanoSeconds() {
+double currentTimeInNanoSeconds() {
     SYSTEM_TIMESPEC tv;
     clock_gettime(CLOCK_REALTIME, &tv);
 
-    long long time =
-            (long long)tv.tv_sec * pow(10, 9) + (long long)tv.tv_nsec;
+    double time =
+            tv.tv_sec * pow(10, 9) + tv.tv_nsec;
     return time;
 }
