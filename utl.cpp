@@ -5,6 +5,7 @@
 #include <iostream>
 #include <numeric>
 #include <cmath>
+#include <unistd.h>
 using namespace std;
 #define SYSTEM_TIMESPEC struct timespec
 #define NUM_INTER 10000

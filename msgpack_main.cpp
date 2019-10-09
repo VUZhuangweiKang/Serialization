@@ -40,6 +40,8 @@ int main() {
         long long end_serial = currentTimeInNanoSeconds();
         serial_time.push_back((end_serial - start_serial)/1e3); // convert nano-sec to micro-sec
 
+        sleep(5);
+
         long long start_deserial = currentTimeInNanoSeconds();
         unpacked msg; // deserialize message
         unpack(&msg, sbuf.data(), sbuf.size());
