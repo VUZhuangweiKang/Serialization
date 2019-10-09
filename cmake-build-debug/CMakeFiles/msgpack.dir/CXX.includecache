@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhuangwei/Desktop/Serialization/MsgPackCustomType.h
+utl.cpp
+/home/zhuangwei/Desktop/Serialization/utl.cpp
+msgpack.hpp
+-
+
+/home/zhuangwei/Desktop/Serialization/msgpack_main.cpp
+msgpack.hpp
+-
+MsgPackCustomType.h
+/home/zhuangwei/Desktop/Serialization/MsgPackCustomType.h
+
+/home/zhuangwei/Desktop/Serialization/utl.cpp
+iostream
+-
+numeric
+-
+cmath
+-
+

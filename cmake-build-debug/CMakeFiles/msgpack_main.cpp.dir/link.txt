@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/msgpack_main.cpp.dir/protobuf_main.cpp.o  -o msgpack_main.cpp 

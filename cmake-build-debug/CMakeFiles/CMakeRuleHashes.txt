@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+61a9275c92379702472ff27553cbbeaf ProtobufCustomType.pb.h

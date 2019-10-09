@@ -619,22 +619,30 @@ class StringTest :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStrMemFieldNumber = 1,
+    kCharMemFieldNumber = 1,
   };
-  // string str_mem = 1;
-  void clear_str_mem();
-  const std::string& str_mem() const;
-  void set_str_mem(const std::string& value);
-  void set_str_mem(std::string&& value);
-  void set_str_mem(const char* value);
-  void set_str_mem(const char* value, size_t size);
-  std::string* mutable_str_mem();
-  std::string* release_str_mem();
-  void set_allocated_str_mem(std::string* str_mem);
+  // repeated bytes char_mem = 1;
+  int char_mem_size() const;
   private:
-  const std::string& _internal_str_mem() const;
-  void _internal_set_str_mem(const std::string& value);
-  std::string* _internal_mutable_str_mem();
+  int _internal_char_mem_size() const;
+  public:
+  void clear_char_mem();
+  const std::string& char_mem(int index) const;
+  std::string* mutable_char_mem(int index);
+  void set_char_mem(int index, const std::string& value);
+  void set_char_mem(int index, std::string&& value);
+  void set_char_mem(int index, const char* value);
+  void set_char_mem(int index, const void* value, size_t size);
+  std::string* add_char_mem();
+  void add_char_mem(const std::string& value);
+  void add_char_mem(std::string&& value);
+  void add_char_mem(const char* value);
+  void add_char_mem(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& char_mem() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_char_mem();
+  private:
+  const std::string& _internal_char_mem(int index) const;
+  std::string* _internal_add_char_mem();
   public:
 
   // @@protoc_insertion_point(class_scope:myprotobuf.StringTest)
@@ -642,7 +650,7 @@ class StringTest :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr str_mem_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> char_mem_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ProtobufCustomType_2eproto;
 };
@@ -1484,64 +1492,78 @@ DoubleSeqTest::mutable_double_mem() {
 
 // StringTest
 
-// string str_mem = 1;
-inline void StringTest::clear_str_mem() {
-  str_mem_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// repeated bytes char_mem = 1;
+inline int StringTest::_internal_char_mem_size() const {
+  return char_mem_.size();
 }
-inline const std::string& StringTest::str_mem() const {
-  // @@protoc_insertion_point(field_get:myprotobuf.StringTest.str_mem)
-  return _internal_str_mem();
+inline int StringTest::char_mem_size() const {
+  return _internal_char_mem_size();
 }
-inline void StringTest::set_str_mem(const std::string& value) {
-  _internal_set_str_mem(value);
-  // @@protoc_insertion_point(field_set:myprotobuf.StringTest.str_mem)
+inline void StringTest::clear_char_mem() {
+  char_mem_.Clear();
 }
-inline std::string* StringTest::mutable_str_mem() {
-  // @@protoc_insertion_point(field_mutable:myprotobuf.StringTest.str_mem)
-  return _internal_mutable_str_mem();
+inline std::string* StringTest::add_char_mem() {
+  // @@protoc_insertion_point(field_add_mutable:myprotobuf.StringTest.char_mem)
+  return _internal_add_char_mem();
 }
-inline const std::string& StringTest::_internal_str_mem() const {
-  return str_mem_.GetNoArena();
+inline const std::string& StringTest::_internal_char_mem(int index) const {
+  return char_mem_.Get(index);
 }
-inline void StringTest::_internal_set_str_mem(const std::string& value) {
-  
-  str_mem_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+inline const std::string& StringTest::char_mem(int index) const {
+  // @@protoc_insertion_point(field_get:myprotobuf.StringTest.char_mem)
+  return _internal_char_mem(index);
 }
-inline void StringTest::set_str_mem(std::string&& value) {
-  
-  str_mem_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:myprotobuf.StringTest.str_mem)
+inline std::string* StringTest::mutable_char_mem(int index) {
+  // @@protoc_insertion_point(field_mutable:myprotobuf.StringTest.char_mem)
+  return char_mem_.Mutable(index);
 }
-inline void StringTest::set_str_mem(const char* value) {
+inline void StringTest::set_char_mem(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:myprotobuf.StringTest.char_mem)
+  char_mem_.Mutable(index)->assign(value);
+}
+inline void StringTest::set_char_mem(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:myprotobuf.StringTest.char_mem)
+  char_mem_.Mutable(index)->assign(std::move(value));
+}
+inline void StringTest::set_char_mem(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  
-  str_mem_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:myprotobuf.StringTest.str_mem)
+  char_mem_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:myprotobuf.StringTest.char_mem)
 }
-inline void StringTest::set_str_mem(const char* value, size_t size) {
-  
-  str_mem_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:myprotobuf.StringTest.str_mem)
+inline void StringTest::set_char_mem(int index, const void* value, size_t size) {
+  char_mem_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:myprotobuf.StringTest.char_mem)
 }
-inline std::string* StringTest::_internal_mutable_str_mem() {
-  
-  return str_mem_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline std::string* StringTest::_internal_add_char_mem() {
+  return char_mem_.Add();
 }
-inline std::string* StringTest::release_str_mem() {
-  // @@protoc_insertion_point(field_release:myprotobuf.StringTest.str_mem)
-  
-  return str_mem_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void StringTest::add_char_mem(const std::string& value) {
+  char_mem_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:myprotobuf.StringTest.char_mem)
 }
-inline void StringTest::set_allocated_str_mem(std::string* str_mem) {
-  if (str_mem != nullptr) {
-    
-  } else {
-    
-  }
-  str_mem_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), str_mem);
-  // @@protoc_insertion_point(field_set_allocated:myprotobuf.StringTest.str_mem)
+inline void StringTest::add_char_mem(std::string&& value) {
+  char_mem_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:myprotobuf.StringTest.char_mem)
+}
+inline void StringTest::add_char_mem(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  char_mem_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:myprotobuf.StringTest.char_mem)
+}
+inline void StringTest::add_char_mem(const void* value, size_t size) {
+  char_mem_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:myprotobuf.StringTest.char_mem)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+StringTest::char_mem() const {
+  // @@protoc_insertion_point(field_list:myprotobuf.StringTest.char_mem)
+  return char_mem_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+StringTest::mutable_char_mem() {
+  // @@protoc_insertion_point(field_mutable_list:myprotobuf.StringTest.char_mem)
+  return &char_mem_;
 }
 
 // -------------------------------------------------------------------

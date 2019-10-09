@@ -15,12 +15,14 @@ TestCustomType initStructProto(int32_t msgID) {
         octet->set_octet(to_string(i).c_str());
     }
 
-    string str = "Hello world!";
-    testCustomType.mutable_test_string()->set_str_mem(str);
+    char str[SIZE_TEST_STR];
+    sprintf(str, "Hello world!");
+    testCustomType.mutable_test_string()->add_char_mem(str);
 
     for (int32_t m = 0; m < SIZE_TEST_SEQ; ++m) {
         testCustomType.mutable_test_long_seq()->add_long_mem(m);
-        testCustomType.mutable_test_string_seq()->add_string_mem()->set_str_mem(str);
+        StringTest *str_mem = testCustomType.mutable_test_string_seq()->add_string_mem();
+        str_mem->add_char_mem(str);
         testCustomType.mutable_test_double_seq()->add_double_mem((double)m);
     }
 

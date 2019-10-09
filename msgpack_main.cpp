@@ -10,7 +10,7 @@ TestCustomType initStruct(int32_t msgID) {
         customType.test_octet[i] = (octet) i;
     }
 
-    customType.test_string.test_string = "Hello world!";
+    sprintf(customType.test_string.test_string, "Hello world!");
 
     for (int j = 0; j < SIZE_TEST_SEQ; ++j) {
         customType.test_long_seq.test_long_seq[j] = customType.test_long;

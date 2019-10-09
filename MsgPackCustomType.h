@@ -21,7 +21,7 @@ typedef struct DoubleSeqTest {
 }DoubleSeqTest;
 
 typedef struct StringTest {
-    string test_string;
+    char test_string[SIZE_TEST_STR];
     MSGPACK_DEFINE(test_string);
 }StringTest;
 

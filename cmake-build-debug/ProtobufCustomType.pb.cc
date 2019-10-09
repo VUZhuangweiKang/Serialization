@@ -205,7 +205,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ProtobufCustomType_2eproto::of
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::myprotobuf::StringTest, str_mem_),
+  PROTOBUF_FIELD_OFFSET(::myprotobuf::StringTest, char_mem_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::myprotobuf::StringSeqTest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -264,23 +264,23 @@ const char descriptor_table_protodef_ProtobufCustomType_2eproto[] PROTOBUF_SECTI
   "\n\030ProtobufCustomType.proto\022\nmyprotobuf\"\026"
   "\n\005Octet\022\r\n\005octet\030\001 \001(\014\"\037\n\013LongSeqTest\022\020\n"
   "\010long_mem\030\001 \003(\017\"#\n\rDoubleSeqTest\022\022\n\ndoub"
-  "le_mem\030\001 \003(\001\"\035\n\nStringTest\022\017\n\007str_mem\030\001 "
-  "\001(\t\";\n\rStringSeqTest\022*\n\nstring_mem\030\001 \003(\013"
-  "2\026.myprotobuf.StringTest\"A\n\020ArrayLongSeq"
-  "Test\022-\n\014long_seq_mem\030\001 \003(\0132\027.myprotobuf."
-  "LongSeqTest\"O\n\023SeqArrayLongSeqTest\0228\n\022ar"
-  "ray_long_seq_mem\030\001 \003(\0132\034.myprotobuf.Arra"
-  "yLongSeqTest\"\214\003\n\016TestCustomType\022\021\n\ttest_"
-  "long\030\001 \001(\005\022%\n\ntest_octet\030\002 \003(\0132\021.myproto"
-  "buf.Octet\022.\n\rtest_long_seq\030\003 \001(\0132\027.mypro"
-  "tobuf.LongSeqTest\022+\n\013test_string\030\004 \001(\0132\026"
-  ".myprotobuf.StringTest\0222\n\017test_string_se"
-  "q\030\005 \001(\0132\031.myprotobuf.StringSeqTest\0222\n\017te"
-  "st_double_seq\030\006 \001(\0132\031.myprotobuf.DoubleS"
-  "eqTest\0229\n\023test_array_long_seq\030\007 \001(\0132\034.my"
-  "protobuf.ArrayLongSeqTest\022@\n\027seq_array_l"
-  "ong_seq_test\030\010 \001(\0132\037.myprotobuf.SeqArray"
-  "LongSeqTestb\006proto3"
+  "le_mem\030\001 \003(\001\"\036\n\nStringTest\022\020\n\010char_mem\030\001"
+  " \003(\014\";\n\rStringSeqTest\022*\n\nstring_mem\030\001 \003("
+  "\0132\026.myprotobuf.StringTest\"A\n\020ArrayLongSe"
+  "qTest\022-\n\014long_seq_mem\030\001 \003(\0132\027.myprotobuf"
+  ".LongSeqTest\"O\n\023SeqArrayLongSeqTest\0228\n\022a"
+  "rray_long_seq_mem\030\001 \003(\0132\034.myprotobuf.Arr"
+  "ayLongSeqTest\"\214\003\n\016TestCustomType\022\021\n\ttest"
+  "_long\030\001 \001(\005\022%\n\ntest_octet\030\002 \003(\0132\021.myprot"
+  "obuf.Octet\022.\n\rtest_long_seq\030\003 \001(\0132\027.mypr"
+  "otobuf.LongSeqTest\022+\n\013test_string\030\004 \001(\0132"
+  "\026.myprotobuf.StringTest\0222\n\017test_string_s"
+  "eq\030\005 \001(\0132\031.myprotobuf.StringSeqTest\0222\n\017t"
+  "est_double_seq\030\006 \001(\0132\031.myprotobuf.Double"
+  "SeqTest\0229\n\023test_array_long_seq\030\007 \001(\0132\034.m"
+  "yprotobuf.ArrayLongSeqTest\022@\n\027seq_array_"
+  "long_seq_test\030\010 \001(\0132\037.myprotobuf.SeqArra"
+  "yLongSeqTestb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ProtobufCustomType_2eproto_deps[1] = {
 };
@@ -297,7 +297,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Pro
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ProtobufCustomType_2eproto_once;
 static bool descriptor_table_ProtobufCustomType_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ProtobufCustomType_2eproto = {
-  &descriptor_table_ProtobufCustomType_2eproto_initialized, descriptor_table_protodef_ProtobufCustomType_2eproto, "ProtobufCustomType.proto", 779,
+  &descriptor_table_ProtobufCustomType_2eproto_initialized, descriptor_table_protodef_ProtobufCustomType_2eproto, "ProtobufCustomType.proto", 780,
   &descriptor_table_ProtobufCustomType_2eproto_once, descriptor_table_ProtobufCustomType_2eproto_sccs, descriptor_table_ProtobufCustomType_2eproto_deps, 8, 0,
   schemas, file_default_instances, TableStruct_ProtobufCustomType_2eproto::offsets,
   file_level_metadata_ProtobufCustomType_2eproto, 8, file_level_enum_descriptors_ProtobufCustomType_2eproto, file_level_service_descriptors_ProtobufCustomType_2eproto,
@@ -901,18 +901,14 @@ StringTest::StringTest()
 }
 StringTest::StringTest(const StringTest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      char_mem_(from.char_mem_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  str_mem_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_str_mem().empty()) {
-    str_mem_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.str_mem_);
-  }
   // @@protoc_insertion_point(copy_constructor:myprotobuf.StringTest)
 }
 
 void StringTest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StringTest_ProtobufCustomType_2eproto.base);
-  str_mem_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 StringTest::~StringTest() {
@@ -921,7 +917,6 @@ StringTest::~StringTest() {
 }
 
 void StringTest::SharedDtor() {
-  str_mem_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void StringTest::SetCachedSize(int size) const {
@@ -939,7 +934,7 @@ void StringTest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  str_mem_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  char_mem_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -950,11 +945,16 @@ const char* StringTest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string str_mem = 1;
+      // repeated bytes char_mem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(_internal_mutable_str_mem(), ptr, ctx, "myprotobuf.StringTest.str_mem");
-          CHK_(ptr);
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(_internal_add_char_mem(), ptr, ctx);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -983,14 +983,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string str_mem = 1;
-  if (this->str_mem().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_str_mem().data(), static_cast<int>(this->_internal_str_mem().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "myprotobuf.StringTest.str_mem");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_str_mem(), target);
+  // repeated bytes char_mem = 1;
+  for (int i = 0, n = this->_internal_char_mem_size(); i < n; i++) {
+    const auto& s = this->_internal_char_mem(i);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1009,11 +1005,12 @@ size_t StringTest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string str_mem = 1;
-  if (this->str_mem().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_str_mem());
+  // repeated bytes char_mem = 1;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(char_mem_.size());
+  for (int i = 0, n = char_mem_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      char_mem_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1047,10 +1044,7 @@ void StringTest::MergeFrom(const StringTest& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.str_mem().size() > 0) {
-
-    str_mem_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.str_mem_);
-  }
+  char_mem_.MergeFrom(from.char_mem_);
 }
 
 void StringTest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -1074,8 +1068,7 @@ bool StringTest::IsInitialized() const {
 void StringTest::InternalSwap(StringTest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  str_mem_.Swap(&other->str_mem_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  char_mem_.InternalSwap(&other->char_mem_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata StringTest::GetMetadata() const {

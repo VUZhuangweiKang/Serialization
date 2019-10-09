@@ -14,7 +14,7 @@ message DoubleSeqTest {
 }
 
 message StringTest {
-    string str_mem = 1;
+    repeated bytes char_mem = 1;
 }
 
 message StringSeqTest {
