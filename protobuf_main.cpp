@@ -46,40 +46,36 @@ TestCustomType initStructProto(int32_t msgID) {
     return testCustomType;
 }
 
+double serialization(int32_t i) {
+    TestCustomType testCustomType = initStructProto(i);
+    string proto_serialized_str;
+    double start_serial = currentTimeInNanoSeconds();
+    proto_serialized_str = testCustomType.SerializeAsString();
+    double end_serial = currentTimeInNanoSeconds();
+    return (end_serial - start_serial)/1e3; // convert nano-sec to micro-sec
+}
+
+double deserialization(int32_t i) {
+    TestCustomType testCustomType = initStructProto(i);
+    string proto_serialized_str;
+    proto_serialized_str = testCustomType.SerializeAsString();
+
+    double start_deserial = currentTimeInNanoSeconds();
+    testCustomType.ParseFromString(proto_serialized_str);
+    double end_deserial = currentTimeInNanoSeconds();
+    return (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec;
+}
+
 int main() {
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
     double serial_time = 0.0, deserial_time = 0.0;
 
     for (int32_t i = 0; i < NUM_INTER; ++i) {
-        TestCustomType testCustomType = initStructProto(i);
-
-        double start_serial = currentTimeInNanoSeconds();
-        string proto_serialized_str = testCustomType.SerializeAsString();
-        double end_serial = currentTimeInNanoSeconds();
-        serial_time += (end_serial - start_serial)/1e3; // convert nano-sec to micro-sec
-
-        double start_deserial = currentTimeInNanoSeconds();
-        testCustomType.ParseFromString(proto_serialized_str);
-        double end_deserial = currentTimeInNanoSeconds();
-        deserial_time += (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec
-
-        if(i == 0){
-            cout << "Long: " << sizeof(testCustomType.test_long()) << endl
-                 << "Octet: " << testCustomType.test_octet_size() << endl
-                 << "LongSeq: " << testCustomType.test_long_seq().ByteSizeLong() << endl
-                 << "String: " << testCustomType.test_string().ByteSizeLong() << endl
-                 << "StringSeq: " << testCustomType.test_string_seq().ByteSizeLong() << endl
-                 << "DoubleSeq: " << testCustomType.test_double_seq().ByteSizeLong() << endl
-                 << "ArrayLongSeq: " << testCustomType.test_array_long_seq().ByteSizeLong() << endl
-                 << "SeqArrayLongSeq: " << testCustomType.seq_array_long_seq_test().ByteSizeLong()
-                 << endl;
-            cout << "===========================" << endl;
-            cout << "Length: " << testCustomType.ByteSizeLong() << " bytes" << endl;
-        }
+        serial_time += serialization(i);
+        deserial_time += deserialization(i);
     }
 
-    cout << "===========================" << endl;
     double avg_serial_time = serial_time/NUM_INTER;
     double avg_deserial_time = deserial_time/NUM_INTER;
 
