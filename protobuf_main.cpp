@@ -47,22 +47,24 @@ TestCustomType initStructProto(int32_t msgID) {
 }
 
 double serialization(int32_t i) {
+    double start_serial, end_serial;
     TestCustomType testCustomType = initStructProto(i);
     string proto_serialized_str;
-    double start_serial = currentTimeInNanoSeconds();
+    start_serial = currentTimeInNanoSeconds();
     proto_serialized_str = testCustomType.SerializeAsString();
-    double end_serial = currentTimeInNanoSeconds();
+    end_serial = currentTimeInNanoSeconds();
     return (end_serial - start_serial)/1e3; // convert nano-sec to micro-sec
 }
 
 double deserialization(int32_t i) {
+    double start_deserial, end_deserial;
     TestCustomType testCustomType = initStructProto(i);
     string proto_serialized_str;
     proto_serialized_str = testCustomType.SerializeAsString();
 
-    double start_deserial = currentTimeInNanoSeconds();
+    start_deserial = currentTimeInNanoSeconds();
     testCustomType.ParseFromString(proto_serialized_str);
-    double end_deserial = currentTimeInNanoSeconds();
+    end_deserial = currentTimeInNanoSeconds();
     return (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec;
 }
 

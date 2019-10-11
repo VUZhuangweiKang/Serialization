@@ -25,28 +25,31 @@ TestCustomType initStruct(int32_t msgID) {
     for (auto & l : customType.seq_array_long_seq_test.seq_array_long_seq_test) {
         l = customType.test_array_long_seq;
     }
+
     return customType;
 }
 
 double serialization(int32_t i) {
-    sbuffer sbuf;
+    double start_serial, end_serial;
     TestCustomType my_struct = initStruct(i);
-    double start_serial = currentTimeInNanoSeconds();
+    sbuffer sbuf(sizeof(my_struct));
+    start_serial = currentTimeInNanoSeconds();
     pack(sbuf, my_struct);
-    double end_serial = currentTimeInNanoSeconds();
+    end_serial = currentTimeInNanoSeconds();
     sbuf.release(); // release buffer
     return (end_serial - start_serial) / 1e3; // convert nano-sec to micro-sec;
 }
 
 double deserialization(int32_t i) {
-    sbuffer sbuf;
+    double start_deserial, end_deserial;
     TestCustomType my_struct = initStruct(i);
+    sbuffer sbuf(sizeof(my_struct));
     pack(sbuf, my_struct);
-
     unpacked msg; // deserialize message
-    double start_deserial = currentTimeInNanoSeconds();
+
+    start_deserial = currentTimeInNanoSeconds();
     unpack(&msg, sbuf.data(), sbuf.size());
-    double end_deserial = currentTimeInNanoSeconds();
+    end_deserial = currentTimeInNanoSeconds();
     sbuf.release(); // release buffer
     return (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec;
 }
