@@ -43,15 +43,13 @@ double RTIDDSImpl<T>::obtain_dds_serialize_time_cost(
         return 0;
     }
 
-    /* Serialize time calculating */
-    timeInit = (unsigned int) PerftestClock::getInstance().getTimeUsec();
-
     RTIOsapiHeap_allocateBuffer(
             &serializeBuffer,
             maxSizeSerializedSample,
             RTI_OSAPI_ALIGNMENT_DEFAULT);
 
-    double timeAllocateBuf = (unsigned int) PerftestClock::getInstance().getTimeUsec();
+    /* Serialize time calculating */
+    timeInit = (unsigned int) PerftestClock::getInstance().getTimeUsec();
 
     for (unsigned int i = 0; i < iters; i++) {
 #ifdef RTI_CUSTOM_TYPE
@@ -69,7 +67,7 @@ double RTIDDSImpl<T>::obtain_dds_serialize_time_cost(
 
     timeFinish = (unsigned int) PerftestClock::getInstance().getTimeUsec();
 
-    serializeTime = timeAllocateBuf - timeInit + (timeFinish - timeAllocateBuf)/iters;
+    serializeTime = (timeFinish - timeInit) / (float)iters;
 
     if (serializeBuffer != NULL) {
         RTIOsapiHeap_freeBuffer(serializeBuffer);
@@ -154,6 +152,7 @@ double RTIDDSImpl<T>::obtain_dds_deserialize_time_cost(
 
     /* Deserialize time calculating */
     timeInit = (unsigned int) PerftestClock::getInstance().getTimeUsec();
+
     for (unsigned int i = 0; i < iters; i++) {
 #ifdef RTI_CUSTOM_TYPE
         set_custom_type_data(data.custom_type, i, sampleSize);
