@@ -5,9 +5,8 @@
 #include <iostream>
 #include <numeric>
 #include <cmath>
-#include <unistd.h>
+#include <chrono>
 using namespace std;
-#define SYSTEM_TIMESPEC struct timespec
 #define NUM_INTER 10000
 
 const long SIZE_TEST_STR = 16;
@@ -16,10 +15,7 @@ const long SIZE_TEST_ARRAY_SEQ = 4;
 const long SIZE_TEST_SEQ_ARRAY_SEQ = 4;
 const long SIZE_OCTET_ARRAY = 360;
 
-double currentTimeInNanoSeconds() {
-    SYSTEM_TIMESPEC tv;
-    clock_gettime(CLOCK_REALTIME, &tv);
-
-    double time = tv.tv_sec * 1e9 + tv.tv_nsec;
-    return time;
+auto currentTime() {
+    auto clock = std::chrono::high_resolution_clock::now();
+    return clock;
 }

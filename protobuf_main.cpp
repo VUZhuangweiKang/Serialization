@@ -16,7 +16,7 @@ TestCustomType initStructProto(int32_t msgID) {
     }
 
     char str[SIZE_TEST_STR];
-    sprintf(str, "Hello world!");
+    sprintf(str, " Hello world! ");
     testCustomType.mutable_test_string()->add_char_mem(str);
 
     for (int32_t m = 0; m < SIZE_TEST_SEQ; ++m) {
@@ -46,26 +46,39 @@ TestCustomType initStructProto(int32_t msgID) {
     return testCustomType;
 }
 
+void showMsgSize() {
+    TestCustomType sample = initStructProto(0);
+    cout << "sample = " << sample.ByteSizeLong() << endl;
+    cout << "sample.test_long = " << sizeof(sample.test_long()) << endl;
+    cout << "sample.test_octet = " << sample.test_octet().size() << endl;
+    cout << "sample.test_string = " << sample.test_string().ByteSizeLong() << endl;
+    cout << "sample.test_long_seq = " << sample.test_long_seq().ByteSizeLong() << endl;
+    cout << "sample.test_string_seq = " << sample.test_string_seq().ByteSizeLong() << endl;
+    cout << "sample.test_double_seq = " << sample.test_double_seq().ByteSizeLong() << endl;
+    cout << "sample.test_array_long_seq = " << sample.test_array_long_seq().ByteSizeLong() << endl;
+    cout << "sample.seq_array_long_seq_test = " << sample.seq_array_long_seq_test().ByteSizeLong() << endl;
+}
+
 double serialization(int32_t i) {
-    double start_serial, end_serial;
     TestCustomType testCustomType = initStructProto(i);
-    string proto_serialized_str;
-    start_serial = currentTimeInNanoSeconds();
-    proto_serialized_str = testCustomType.SerializeAsString();
-    end_serial = currentTimeInNanoSeconds();
-    return (end_serial - start_serial)/1e3; // convert nano-sec to micro-sec
+    size_t size = testCustomType.ByteSizeLong();
+    auto start_serial = currentTime();
+    char *buffer = (char *)malloc(size);
+    testCustomType.SerializeToArray(buffer, size);
+    auto end_serial = currentTime();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
 }
 
 double deserialization(int32_t i) {
-    double start_deserial, end_deserial;
     TestCustomType testCustomType = initStructProto(i);
-    string proto_serialized_str;
-    proto_serialized_str = testCustomType.SerializeAsString();
+    size_t size = testCustomType.ByteSizeLong();
+    char *buffer = (char *)malloc(size);
+    testCustomType.SerializeToArray(buffer, size);
 
-    start_deserial = currentTimeInNanoSeconds();
-    testCustomType.ParseFromString(proto_serialized_str);
-    end_deserial = currentTimeInNanoSeconds();
-    return (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec;
+    auto start_deserial = currentTime();
+    testCustomType.ParseFromArray(buffer, size);
+    auto end_deserial = currentTime();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count();
 }
 
 int main() {
@@ -82,8 +95,7 @@ int main() {
     double avg_deserial_time = deserial_time/NUM_INTER;
 
     cout << "Serialization / Deserialization : " << avg_serial_time << " / " << avg_deserial_time << " us" << endl;
-
     google::protobuf::ShutdownProtobufLibrary();
-
+    showMsgSize();
     return 0;
 }

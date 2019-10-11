@@ -29,29 +29,45 @@ TestCustomType initStruct(int32_t msgID) {
     return customType;
 }
 
+void showMsgSize() {
+    TestCustomType sample = initStruct(0);
+    cout << "sample = " << sizeof(sample) << endl;
+    cout << "sample.test_long = " << sizeof(sample.test_long) << endl;
+    cout << "sample.test_octet = " << sizeof(sample.test_octet) << endl;
+    cout << "sample.test_string = " << sizeof(sample.test_string) << endl;
+    cout << "sample.test_long_seq = " << sizeof(sample.test_long_seq) << endl;
+    cout << "sample.test_string_seq = " << sizeof(sample.test_string_seq) << endl;
+    cout << "sample.test_double_seq = " << sizeof(sample.test_double_seq) << endl;
+    cout << "sample.test_array_long_seq = " << sizeof(sample.test_array_long_seq) << endl;
+    cout << "sample.seq_array_long_seq_test = " << sizeof(sample.seq_array_long_seq_test) << endl;
+}
+
 double serialization(int32_t i) {
-    double start_serial, end_serial;
+    size_t maxSerializeSample = 0;
     TestCustomType my_struct = initStruct(i);
-    sbuffer sbuf(sizeof(my_struct));
-    start_serial = currentTimeInNanoSeconds();
+    sbuffer temp_sbuf;
+    pack(temp_sbuf, my_struct);
+    maxSerializeSample = temp_sbuf.size();
+
+    auto start_serial = currentTime();
+    sbuffer sbuf(maxSerializeSample);
     pack(sbuf, my_struct);
-    end_serial = currentTimeInNanoSeconds();
+    auto end_serial = currentTime();
     sbuf.release(); // release buffer
-    return (end_serial - start_serial) / 1e3; // convert nano-sec to micro-sec;
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
 }
 
 double deserialization(int32_t i) {
-    double start_deserial, end_deserial;
     TestCustomType my_struct = initStruct(i);
-    sbuffer sbuf(sizeof(my_struct));
+    sbuffer sbuf;
     pack(sbuf, my_struct);
-    unpacked msg; // deserialize message
 
-    start_deserial = currentTimeInNanoSeconds();
+    unpacked msg; // deserialize message
+    auto start_deserial = currentTime();
     unpack(&msg, sbuf.data(), sbuf.size());
-    end_deserial = currentTimeInNanoSeconds();
+    auto end_deserial = currentTime();
     sbuf.release(); // release buffer
-    return (end_deserial - start_deserial)/1e3; // convert nano-sec to micro-sec;
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count();
 }
 
 int main() {
@@ -66,6 +82,6 @@ int main() {
     double avg_deserial_time = deserial_time/NUM_INTER;
 
     cout << "Serialization / Deserialization : " << avg_serial_time << " / " << avg_deserial_time << " us" << endl;
-
+    showMsgSize();
     return 0;
 }
