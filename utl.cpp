@@ -7,7 +7,7 @@
 #include <cmath>
 #include <chrono>
 using namespace std;
-#define NUM_INTER 10000
+#define NUM_INTER 1000
 
 const long SIZE_TEST_STR = 16;
 const long SIZE_TEST_SEQ = 128;

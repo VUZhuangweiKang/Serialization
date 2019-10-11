@@ -49,8 +49,8 @@ double serialization(int32_t i) {
     pack(temp_sbuf, my_struct);
     maxSerializeSample = temp_sbuf.size();
 
-    auto start_serial = currentTime();
     sbuffer sbuf(maxSerializeSample);
+    auto start_serial = currentTime();
     pack(sbuf, my_struct);
     auto end_serial = currentTime();
     sbuf.release(); // release buffer

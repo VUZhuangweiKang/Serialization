@@ -62,8 +62,8 @@ void showMsgSize() {
 double serialization(int32_t i) {
     TestCustomType testCustomType = initStructProto(i);
     size_t size = testCustomType.ByteSizeLong();
-    auto start_serial = currentTime();
     char *buffer = (char *)malloc(size);
+    auto start_serial = currentTime();
     testCustomType.SerializeToArray(buffer, size);
     auto end_serial = currentTime();
     return std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
