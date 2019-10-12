@@ -19,29 +19,19 @@ TestCustomType initStructProto(int32_t msgID) {
     sprintf(str, " Hello world! ");
     testCustomType.mutable_test_string()->add_char_mem(str);
 
+    LongSeqTest *long_seq = testCustomType.mutable_test_long_seq();
     for (int32_t m = 0; m < SIZE_TEST_SEQ; ++m) {
-        testCustomType.mutable_test_long_seq()->add_long_mem(m);
-        StringTest *str_mem = testCustomType.mutable_test_string_seq()->add_string_mem();
-        str_mem->add_char_mem(str);
+        long_seq->add_long_mem(m);
+        testCustomType.mutable_test_string_seq()->add_string_mem()->add_char_mem(str);
         testCustomType.mutable_test_double_seq()->add_double_mem((double)m);
     }
 
-    for (int32_t j= 0; j < SIZE_TEST_ARRAY_SEQ; ++j) {
-        LongSeqTest *long_seq = testCustomType.mutable_test_array_long_seq()->add_long_seq_mem();
-        for (int32_t i = 0; i < SIZE_TEST_SEQ; ++i) {
-            long_seq->add_long_mem(i);
-        }
-    }
+    ArrayLongSeqTest *arrayLongSeqTest = testCustomType.mutable_test_array_long_seq();
+    for (int32_t j= 0; j < SIZE_TEST_ARRAY_SEQ; ++j)
+        arrayLongSeqTest->add_long_seq_mem()->CopyFrom(*long_seq);
 
-    for (int k = 0; k < SIZE_TEST_SEQ_ARRAY_SEQ; ++k) {
-        ArrayLongSeqTest *arrayLongSeqTest = testCustomType.mutable_seq_array_long_seq_test()->add_array_long_seq_mem();
-        for (int32_t j= 0; j < SIZE_TEST_ARRAY_SEQ; ++j) {
-            LongSeqTest *long_seq = arrayLongSeqTest->add_long_seq_mem();
-            for (int32_t i = 0; i < SIZE_TEST_SEQ; ++i) {
-                long_seq->add_long_mem(i);
-            }
-        }
-    }
+    for (int k = 0; k < SIZE_TEST_SEQ_ARRAY_SEQ; ++k)
+        testCustomType.mutable_seq_array_long_seq_test()->add_array_long_seq_mem()->CopyFrom(*arrayLongSeqTest);
 
     return testCustomType;
 }

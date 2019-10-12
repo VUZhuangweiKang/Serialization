@@ -8,10 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "CMakeFiles/3.15.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeSystem.cmake"
-  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCInformation.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXInformation.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCommonLanguageInclude.cmake"
@@ -22,25 +20,28 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeLanguageInformation.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake"
-  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckIncludeFile.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckCXXSourceCompiles.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckIncludeFileCXX.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/CheckLibraryExists.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-C.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-CXX.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageMessage.cmake"
+  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindPkgConfig.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindProtobuf.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/FindThreads.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Internal/CMakeCheckCompilerFlag.cmake"
-  "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-C.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-CXX.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/ProcessorCount.cmake"
   "/opt/clion-2019.2.3/bin/cmake/linux/share/cmake-3.15/Modules/SelectLibraryConfigurations.cmake"
+  "/usr/local/lib/cmake/CapnProto/CapnProtoConfig.cmake"
+  "/usr/local/lib/cmake/CapnProto/CapnProtoConfigVersion.cmake"
+  "/usr/local/lib/cmake/CapnProto/CapnProtoMacros.cmake"
+  "/usr/local/lib/cmake/CapnProto/CapnProtoTargets.cmake"
   )
 
 # The corresponding makefile is:
@@ -56,6 +57,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/capnproto.dir/DependInfo.cmake"
   "CMakeFiles/msgpack.dir/DependInfo.cmake"
   "CMakeFiles/protobuf.dir/DependInfo.cmake"
   )

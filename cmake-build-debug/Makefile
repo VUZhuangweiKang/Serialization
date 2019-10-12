@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named capnproto
+
+# Build rule for target.
+capnproto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 capnproto
+.PHONY : capnproto
+
+# fast build rule for target.
+capnproto/fast:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/build
+.PHONY : capnproto/fast
+
+#=============================================================================
 # Target rules for targets named msgpack
 
 # Build rule for target.
@@ -162,6 +175,60 @@ ProtobufCustomType.pb.s: ProtobufCustomType.pb.cc.s
 ProtobufCustomType.pb.cc.s:
 	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.s
 .PHONY : ProtobufCustomType.pb.cc.s
+
+TestCustomType.capnp.o: TestCustomType.capnp.c++.o
+
+.PHONY : TestCustomType.capnp.o
+
+# target to build an object file
+TestCustomType.capnp.c++.o:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.o
+.PHONY : TestCustomType.capnp.c++.o
+
+TestCustomType.capnp.i: TestCustomType.capnp.c++.i
+
+.PHONY : TestCustomType.capnp.i
+
+# target to preprocess a source file
+TestCustomType.capnp.c++.i:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.i
+.PHONY : TestCustomType.capnp.c++.i
+
+TestCustomType.capnp.s: TestCustomType.capnp.c++.s
+
+.PHONY : TestCustomType.capnp.s
+
+# target to generate assembly for a file
+TestCustomType.capnp.c++.s:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.s
+.PHONY : TestCustomType.capnp.c++.s
+
+capnproto_main.o: capnproto_main.cpp.o
+
+.PHONY : capnproto_main.o
+
+# target to build an object file
+capnproto_main.cpp.o:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.o
+.PHONY : capnproto_main.cpp.o
+
+capnproto_main.i: capnproto_main.cpp.i
+
+.PHONY : capnproto_main.i
+
+# target to preprocess a source file
+capnproto_main.cpp.i:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.i
+.PHONY : capnproto_main.cpp.i
+
+capnproto_main.s: capnproto_main.cpp.s
+
+.PHONY : capnproto_main.s
+
+# target to generate assembly for a file
+capnproto_main.cpp.s:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.s
+.PHONY : capnproto_main.cpp.s
 
 msgpack_main.o: msgpack_main.cpp.o
 
@@ -225,11 +292,18 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... capnproto"
 	@echo "... msgpack"
 	@echo "... protobuf"
 	@echo "... ProtobufCustomType.pb.o"
 	@echo "... ProtobufCustomType.pb.i"
 	@echo "... ProtobufCustomType.pb.s"
+	@echo "... TestCustomType.capnp.o"
+	@echo "... TestCustomType.capnp.i"
+	@echo "... TestCustomType.capnp.s"
+	@echo "... capnproto_main.o"
+	@echo "... capnproto_main.i"
+	@echo "... capnproto_main.s"
 	@echo "... msgpack_main.o"
 	@echo "... msgpack_main.i"
 	@echo "... msgpack_main.s"

@@ -30,7 +30,7 @@ message SeqArrayLongSeqTest {
 }
 
 message TestCustomType {
-    int32 test_long = 1;
+    sfixed32 test_long = 1;
     repeated Octet test_octet = 2;
     LongSeqTest test_long_seq = 3;
     StringTest test_string = 4;

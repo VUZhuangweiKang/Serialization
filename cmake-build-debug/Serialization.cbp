@@ -5,7 +5,7 @@
 		<Option title="Serialization"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\CapnProto\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
@@ -37,6 +37,54 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="capnproto">
+				<Option output="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/capnproto" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 capnproto"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="capnproto/fast">
+				<Option output="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/capnproto" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 capnproto/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhuangwei/Desktop/Serialization/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="msgpack">
 				<Option output="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/msgpack" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
@@ -44,12 +92,12 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -68,12 +116,12 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -92,12 +140,12 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -116,12 +164,12 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/home/zhuangwei/Desktop/Serialization/cmake-build-debug"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -137,6 +185,12 @@
 		<Unit filename="/home/zhuangwei/Desktop/Serialization/ProtobufCustomType.proto">
 			<Option target="protobuf"/>
 		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/capnproto_main.cpp">
+			<Option target="capnproto"/>
+		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/capnproto_main.h">
+			<Option target="capnproto"/>
+		</Unit>
 		<Unit filename="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/ProtobufCustomType.pb.cc">
 			<Option target="protobuf"/>
 		</Unit>
@@ -146,6 +200,12 @@
 		<Unit filename="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/ProtobufCustomType.pb.h.rule">
 			<Option target="protobuf"/>
 		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/TestCustomType.capnp.c++">
+			<Option target="capnproto"/>
+		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/cmake-build-debug/TestCustomType.capnp.c++.rule">
+			<Option target="capnproto"/>
+		</Unit>
 		<Unit filename="/home/zhuangwei/Desktop/Serialization/msgpack_main.cpp">
 			<Option target="msgpack"/>
 		</Unit>
@@ -154,6 +214,18 @@
 		</Unit>
 		<Unit filename="/home/zhuangwei/Desktop/Serialization/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/../../../../usr/local/lib/cmake/CapnProto/CapnProtoConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\CapnProto\"/>
+		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/../../../../usr/local/lib/cmake/CapnProto/CapnProtoConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\CapnProto\"/>
+		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/../../../../usr/local/lib/cmake/CapnProto/CapnProtoMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\CapnProto\"/>
+		</Unit>
+		<Unit filename="/home/zhuangwei/Desktop/Serialization/../../../../usr/local/lib/cmake/CapnProto/CapnProtoTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\CapnProto\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

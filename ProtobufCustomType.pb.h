@@ -1290,7 +1290,7 @@ class TestCustomType :
   ::myprotobuf::SeqArrayLongSeqTest* _internal_mutable_seq_array_long_seq_test();
   public:
 
-  // int32 test_long = 1;
+  // sfixed32 test_long = 1;
   void clear_test_long();
   ::PROTOBUF_NAMESPACE_ID::int32 test_long() const;
   void set_test_long(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1699,7 +1699,7 @@ SeqArrayLongSeqTest::array_long_seq_mem() const {
 
 // TestCustomType
 
-// int32 test_long = 1;
+// sfixed32 test_long = 1;
 inline void TestCustomType::clear_test_long() {
   test_long_ = 0;
 }

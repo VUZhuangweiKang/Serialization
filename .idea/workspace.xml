@@ -3,6 +3,7 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Serialization" targetName="protobuf" />
+      <config projectName="Serialization" targetName="capnproto" />
       <config projectName="Serialization" targetName="msgpack" />
     </generated>
   </component>
@@ -12,7 +13,37 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dcdb7e2-cafb-4a61-a07a-3b2badae2e31" name="Default Changelist" comment="update" />
+    <list default="true" id="8dcdb7e2-cafb-4a61-a07a-3b2badae2e31" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/TestCustomType.capnp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCustomType.capnp.c++" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCustomType.capnp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestPipe.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capnproto_main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capnproto_main.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/TestCustomType.capnp.c++" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProtobufCustomType.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/ProtobufCustomType.pb.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProtobufCustomType.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/ProtobufCustomType.pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProtobufCustomType.proto" beforeDir="false" afterPath="$PROJECT_DIR$/ProtobufCustomType.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/msgpack.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/msgpack.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/protobuf_main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/protobuf_main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProtobufCustomType.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProtobufCustomType.pb.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProtobufCustomType.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProtobufCustomType.pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Serialization.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Serialization.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/protobuf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/protobuf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protobuf_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/protobuf_main.cpp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +81,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.msgpack">
+  <component name="RunManager" selected="CMake Application.capnproto">
+    <configuration name="capnproto" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Serialization" TARGET_NAME="capnproto" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Serialization" RUN_TARGET_NAME="capnproto">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="msgpack" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Serialization" TARGET_NAME="msgpack" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Serialization" RUN_TARGET_NAME="msgpack">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -63,6 +99,7 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.protobuf" />
+      <item itemvalue="CMake Application.capnproto" />
       <item itemvalue="CMake Application.msgpack" />
     </list>
   </component>
@@ -76,7 +113,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570631941039</updated>
-      <workItem from="1570631944042" duration="46224000" />
+      <workItem from="1570631944042" duration="46365000" />
+      <workItem from="1570807745939" duration="31147000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1570636855332</created>
@@ -103,7 +141,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

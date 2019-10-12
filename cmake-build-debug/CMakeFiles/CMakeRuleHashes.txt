@@ -1,2 +1,3 @@
 # Hashes of file build rules.
 61a9275c92379702472ff27553cbbeaf ProtobufCustomType.pb.h
+287f19fc3e5f6d12817b991e2632041f TestCustomType.capnp.c++

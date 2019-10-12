@@ -271,7 +271,7 @@ const char descriptor_table_protodef_ProtobufCustomType_2eproto[] PROTOBUF_SECTI
   ".LongSeqTest\"O\n\023SeqArrayLongSeqTest\0228\n\022a"
   "rray_long_seq_mem\030\001 \003(\0132\034.myprotobuf.Arr"
   "ayLongSeqTest\"\214\003\n\016TestCustomType\022\021\n\ttest"
-  "_long\030\001 \001(\005\022%\n\ntest_octet\030\002 \003(\0132\021.myprot"
+  "_long\030\001 \001(\017\022%\n\ntest_octet\030\002 \003(\0132\021.myprot"
   "obuf.Octet\022.\n\rtest_long_seq\030\003 \001(\0132\027.mypr"
   "otobuf.LongSeqTest\022+\n\013test_string\030\004 \001(\0132"
   "\026.myprotobuf.StringTest\0222\n\017test_string_s"
@@ -1815,11 +1815,11 @@ const char* TestCustomType::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int32 test_long = 1;
+      // sfixed32 test_long = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          test_long_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          test_long_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::int32>(ptr);
+          ptr += sizeof(::PROTOBUF_NAMESPACE_ID::int32);
         } else goto handle_unusual;
         continue;
       // repeated .myprotobuf.Octet test_octet = 2;
@@ -1902,10 +1902,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 test_long = 1;
+  // sfixed32 test_long = 1;
   if (this->test_long() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_test_long(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteSFixed32ToArray(1, this->_internal_test_long(), target);
   }
 
   // repeated .myprotobuf.Octet test_octet = 2;
@@ -2029,11 +2029,9 @@ size_t TestCustomType::ByteSizeLong() const {
         *seq_array_long_seq_test_);
   }
 
-  // int32 test_long = 1;
+  // sfixed32 test_long = 1;
   if (this->test_long() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_test_long());
+    total_size += 1 + 4;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

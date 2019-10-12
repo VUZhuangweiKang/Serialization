@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhuangwei/Desktop/Serialization/TestCustomType.capnp.h
+capnp/generated-header-support.h
+-
+kj/windows-sanity.h
+-
+
+/home/zhuangwei/Desktop/Serialization/TestPipe.cpp
+capnproto_main.h
+/home/zhuangwei/Desktop/Serialization/capnproto_main.h
+capnp/serialize-packed.h
+-
+capnp/message.h
+-
+
+/home/zhuangwei/Desktop/Serialization/capnproto_main.cpp
+TestCustomType.capnp.h
+/home/zhuangwei/Desktop/Serialization/TestCustomType.capnp.h
+utl.cpp
+/home/zhuangwei/Desktop/Serialization/utl.cpp
+TestPipe.cpp
+/home/zhuangwei/Desktop/Serialization/TestPipe.cpp
+
+/home/zhuangwei/Desktop/Serialization/capnproto_main.h
+
+/home/zhuangwei/Desktop/Serialization/utl.cpp
+iostream
+-
+numeric
+-
+cmath
+-
+chrono
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/capnproto.dir/capnproto_main.cpp.o CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.o  -o capnproto -Wl,-rpath,/usr/local/lib /usr/local/lib/libcapnp-0.7.0.so /usr/local/lib/libkj-0.7.0.so -lpthread -pthread 

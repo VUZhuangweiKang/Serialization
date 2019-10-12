@@ -17,3 +17,13 @@ make
 make check
 sudo make install
 sudo ldconfig
+
+# install cap'n proto
+curl -O https://capnproto.org/capnproto-c++-0.7.0.tar.gz
+tar zxf capnproto-c++-0.7.0.tar.gz
+cd capnproto-c++-0.7.0
+./configure
+make -j6 check
+sudo make install
+
+export PATH=$PREFIX/bin:$PATH
