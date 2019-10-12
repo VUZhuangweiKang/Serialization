@@ -9,7 +9,7 @@ table DoubleSeqTest {
 }
 
 table StringTest {
-    str: [byte];
+    str: string;
 }
 
 table StringSeqTest {

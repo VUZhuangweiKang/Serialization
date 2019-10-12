@@ -30,9 +30,9 @@ export PATH=$PREFIX/bin:$PATH
 
 
 # install flatbuffers
-git clone git@github.com:google/flatbuffers.git
+git clone https://github.com/google/flatbuffers.git
 cd flatbuffers
 cmake -G "Unix Makefiles"
-makem
+make
 make install
 

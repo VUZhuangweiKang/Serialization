@@ -15,23 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dcdb7e2-cafb-4a61-a07a-3b2badae2e31" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/flatbufIDL.fbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flatbufIDL_generated.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flatbuffer_main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flatbuffer_main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/msgpack.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/msgpack.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/protobuf.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Serialization.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Serialization.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/flatbuf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/flatbuf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatbufIDL.fbs" beforeDir="false" afterPath="$PROJECT_DIR$/flatbufIDL.fbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatbufIDL_generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/flatbufIDL_generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatbuffer_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/flatbuffer_main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570631941039</updated>
       <workItem from="1570631944042" duration="46365000" />
-      <workItem from="1570807745939" duration="42305000" />
+      <workItem from="1570807745939" duration="48694000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1570636855332</created>

@@ -126,13 +126,13 @@ struct StringTest FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_STR = 4
   };
-  const flatbuffers::Vector<int8_t> *str() const {
-    return GetPointer<const flatbuffers::Vector<int8_t> *>(VT_STR);
+  const flatbuffers::String *str() const {
+    return GetPointer<const flatbuffers::String *>(VT_STR);
   }
   bool Verify(flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
            VerifyOffset(verifier, VT_STR) &&
-           verifier.VerifyVector(str()) &&
+           verifier.VerifyString(str()) &&
            verifier.EndTable();
   }
 };
@@ -140,7 +140,7 @@ struct StringTest FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
 struct StringTestBuilder {
   flatbuffers::FlatBufferBuilder &fbb_;
   flatbuffers::uoffset_t start_;
-  void add_str(flatbuffers::Offset<flatbuffers::Vector<int8_t>> str) {
+  void add_str(flatbuffers::Offset<flatbuffers::String> str) {
     fbb_.AddOffset(StringTest::VT_STR, str);
   }
   explicit StringTestBuilder(flatbuffers::FlatBufferBuilder &_fbb)
@@ -157,7 +157,7 @@ struct StringTestBuilder {
 
 inline flatbuffers::Offset<StringTest> CreateStringTest(
     flatbuffers::FlatBufferBuilder &_fbb,
-    flatbuffers::Offset<flatbuffers::Vector<int8_t>> str = 0) {
+    flatbuffers::Offset<flatbuffers::String> str = 0) {
   StringTestBuilder builder_(_fbb);
   builder_.add_str(str);
   return builder_.Finish();
@@ -165,8 +165,8 @@ inline flatbuffers::Offset<StringTest> CreateStringTest(
 
 inline flatbuffers::Offset<StringTest> CreateStringTestDirect(
     flatbuffers::FlatBufferBuilder &_fbb,
-    const std::vector<int8_t> *str = nullptr) {
-  auto str__ = str ? _fbb.CreateVector<int8_t>(*str) : 0;
+    const char *str = nullptr) {
+  auto str__ = str ? _fbb.CreateString(str) : 0;
   return FlatBufTest::CreateStringTest(
       _fbb,
       str__);
