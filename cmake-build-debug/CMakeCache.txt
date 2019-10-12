@@ -241,6 +241,12 @@ CapnProto_kj-test_IMPORTED_LOCATION:FILEPATH=/usr/local/lib/libkj-test-0.7.0.so
 //Path to a library.
 CapnProto_kj_IMPORTED_LOCATION:FILEPATH=/usr/local/lib/libkj-0.7.0.so
 
+//Path to a program.
+FLATBUFFERS_FLATC_EXECUTABLE:FILEPATH=/usr/local/bin/flatc
+
+//Path to a file.
+FLATBUFFERS_INCLUDE_DIR:PATH=/usr/local/include
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -526,6 +532,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding Protobuf
 FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/local/lib/libprotobuf.so;-lpthread][/usr/local/include][v3.10.0()]
+//Details about finding flatbuffers
+FIND_PACKAGE_MESSAGE_DETAILS_flatbuffers:INTERNAL=[/usr/local/bin/flatc][/usr/local/include][v()]
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_nproc

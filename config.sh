@@ -27,3 +27,12 @@ make -j6 check
 sudo make install
 
 export PATH=$PREFIX/bin:$PATH
+
+
+# install flatbuffers
+git clone git@github.com:google/flatbuffers.git
+cd flatbuffers
+cmake -G "Unix Makefiles"
+makem
+make install
+

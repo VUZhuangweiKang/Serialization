@@ -57,6 +57,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/flatbuf.dir/DependInfo.cmake"
   "CMakeFiles/capnproto.dir/DependInfo.cmake"
   "CMakeFiles/msgpack.dir/DependInfo.cmake"
   "CMakeFiles/protobuf.dir/DependInfo.cmake"

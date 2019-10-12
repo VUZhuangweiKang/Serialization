@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhuangwei/Desktop/Serialization/flatbufIDL_generated.h
+flatbuffers/flatbuffers.h
+/home/zhuangwei/Desktop/Serialization/flatbuffers/flatbuffers.h
+
+/home/zhuangwei/Desktop/Serialization/flatbuffer_main.cpp
+flatbuffer_main.h
+/home/zhuangwei/Desktop/Serialization/flatbuffer_main.h
+flatbuffers/flatbuffers.h
+/home/zhuangwei/Desktop/Serialization/flatbuffers/flatbuffers.h
+flatbufIDL_generated.h
+/home/zhuangwei/Desktop/Serialization/flatbufIDL_generated.h
+utl.cpp
+/home/zhuangwei/Desktop/Serialization/utl.cpp
+
+/home/zhuangwei/Desktop/Serialization/flatbuffer_main.h
+
+/home/zhuangwei/Desktop/Serialization/utl.cpp
+iostream
+-
+numeric
+-
+cmath
+-
+chrono
+-
+

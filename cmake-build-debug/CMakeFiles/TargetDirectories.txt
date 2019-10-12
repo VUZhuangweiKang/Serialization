@@ -1,5 +1,6 @@
 /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/flatbuf.dir
 /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/capnproto.dir
 /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/msgpack.dir
 /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/protobuf.dir

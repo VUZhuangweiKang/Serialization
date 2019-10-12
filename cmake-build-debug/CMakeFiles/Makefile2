@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /home/zhuangwei/Desktop/Serialization/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/flatbuf.dir/all
 all: CMakeFiles/capnproto.dir/all
 all: CMakeFiles/msgpack.dir/all
 all: CMakeFiles/protobuf.dir/all
@@ -60,6 +61,7 @@ all: CMakeFiles/protobuf.dir/all
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/flatbuf.dir/clean
 clean: CMakeFiles/capnproto.dir/clean
 clean: CMakeFiles/msgpack.dir/clean
 clean: CMakeFiles/protobuf.dir/clean
@@ -70,6 +72,33 @@ clean: CMakeFiles/protobuf.dir/clean
 preinstall:
 
 .PHONY : preinstall
+
+#=============================================================================
+# Target rules for target CMakeFiles/flatbuf.dir
+
+# All Build rule for target.
+CMakeFiles/flatbuf.dir/all:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/depend
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target flatbuf"
+.PHONY : CMakeFiles/flatbuf.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/flatbuf.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/flatbuf.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/flatbuf.dir/rule
+
+# Convenience name for target.
+flatbuf: CMakeFiles/flatbuf.dir/rule
+
+.PHONY : flatbuf
+
+# clean rule for target.
+CMakeFiles/flatbuf.dir/clean:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/clean
+.PHONY : CMakeFiles/flatbuf.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/capnproto.dir
@@ -105,7 +134,7 @@ CMakeFiles/capnproto.dir/clean:
 CMakeFiles/msgpack.dir/all:
 	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/depend
 	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target msgpack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target msgpack"
 .PHONY : CMakeFiles/msgpack.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,7 +161,7 @@ CMakeFiles/msgpack.dir/clean:
 CMakeFiles/protobuf.dir/all:
 	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/depend
 	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10 "Built target protobuf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12 "Built target protobuf"
 .PHONY : CMakeFiles/protobuf.dir/all
 
 # Build rule for subdir invocation for target.

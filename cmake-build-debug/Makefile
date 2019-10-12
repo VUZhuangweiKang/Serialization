@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named flatbuf
+
+# Build rule for target.
+flatbuf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 flatbuf
+.PHONY : flatbuf
+
+# fast build rule for target.
+flatbuf/fast:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/build
+.PHONY : flatbuf/fast
+
+#=============================================================================
 # Target rules for targets named capnproto
 
 # Build rule for target.
@@ -230,6 +243,33 @@ capnproto_main.cpp.s:
 	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.s
 .PHONY : capnproto_main.cpp.s
 
+flatbuffer_main.o: flatbuffer_main.cpp.o
+
+.PHONY : flatbuffer_main.o
+
+# target to build an object file
+flatbuffer_main.cpp.o:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o
+.PHONY : flatbuffer_main.cpp.o
+
+flatbuffer_main.i: flatbuffer_main.cpp.i
+
+.PHONY : flatbuffer_main.i
+
+# target to preprocess a source file
+flatbuffer_main.cpp.i:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.i
+.PHONY : flatbuffer_main.cpp.i
+
+flatbuffer_main.s: flatbuffer_main.cpp.s
+
+.PHONY : flatbuffer_main.s
+
+# target to generate assembly for a file
+flatbuffer_main.cpp.s:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.s
+.PHONY : flatbuffer_main.cpp.s
+
 msgpack_main.o: msgpack_main.cpp.o
 
 .PHONY : msgpack_main.o
@@ -292,6 +332,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... flatbuf"
 	@echo "... capnproto"
 	@echo "... msgpack"
 	@echo "... protobuf"
@@ -304,6 +345,9 @@ help:
 	@echo "... capnproto_main.o"
 	@echo "... capnproto_main.i"
 	@echo "... capnproto_main.s"
+	@echo "... flatbuffer_main.o"
+	@echo "... flatbuffer_main.i"
+	@echo "... flatbuffer_main.s"
 	@echo "... msgpack_main.o"
 	@echo "... msgpack_main.i"
 	@echo "... msgpack_main.s"
