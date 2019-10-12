@@ -89,3 +89,6 @@ int main() {
     showMsgSize();
     return 0;
 }
+
+
+// g++ protobuf_main.cpp ProtobufCustomType.pb.cc -o protobuf -lprotobuf -std=c++14 -lpthread
