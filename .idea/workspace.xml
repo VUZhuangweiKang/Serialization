@@ -18,9 +18,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/flatbuf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/flatbuf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flatbufIDL.fbs" beforeDir="false" afterPath="$PROJECT_DIR$/flatbufIDL.fbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flatbufIDL_generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/flatbufIDL_generated.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flatbuffer_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/flatbuffer_main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570631941039</updated>
       <workItem from="1570631944042" duration="46365000" />
-      <workItem from="1570807745939" duration="48694000" />
+      <workItem from="1570807745939" duration="49762000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1570636855332</created>

@@ -15,17 +15,17 @@ pair<double, double> initStruct(int32_t key) {
     flatbuffers::FlatBufferBuilder builder;
 
     vector<int8_t> octet_v(SIZE_OCTET_ARRAY, key);
-    auto f_octet_v = builder.CreateVector(octet_v);
-
     char *str = (char *)malloc(SIZE_TEST_STR);
     sprintf(str, "Hello World!");
-    auto f_str = builder.CreateString(str);
-    auto str_test = CreateStringTest(builder, f_str);
-
     vector<int32_t> long_seq_v;
     vector<flatbuffers::Offset<StringTest>> str_seq_v;
     vector<double> double_seq_v;
+    vector<flatbuffers::Offset<LongSeqTest>> array_long_seq_v;
+    vector<flatbuffers::Offset<ArrayLongSeqTest>> seq_array_long_seq_v;
 
+    auto f_octet_v = builder.CreateVector(octet_v);
+    auto f_str = builder.CreateString(str);
+    auto str_test = CreateStringTest(builder, f_str);
     for (int i = 0; i < SIZE_TEST_SEQ; ++i) {
         long_seq_v.emplace_back((int32_t)i);
         str_seq_v.push_back(str_test);
@@ -41,45 +41,33 @@ pair<double, double> initStruct(int32_t key) {
     auto f_double_seq_v = builder.CreateVector(double_seq_v);
     auto double_seq = CreateDoubleSeqTest(builder, f_double_seq_v);
 
-    vector<flatbuffers::Offset<LongSeqTest>> array_long_seq_v;
     for (int j = 0; j < SIZE_TEST_ARRAY_SEQ; ++j)
         array_long_seq_v.push_back(long_seq);
     auto f_array_long_seq_v = builder.CreateVector(array_long_seq_v);
     auto array_long_seq = CreateArrayLongSeqTest(builder, f_array_long_seq_v);
 
-    vector<flatbuffers::Offset<ArrayLongSeqTest>> seq_array_long_seq_v;
     for (int k = 0; k < SIZE_TEST_SEQ_ARRAY_SEQ; ++k)
         seq_array_long_seq_v.push_back(array_long_seq);
     auto f_seq_array_long_seq_v = builder.CreateVector(seq_array_long_seq_v);
     auto seq_array_long_seq = CreateSeqArrayLongSeqTest(builder, f_seq_array_long_seq_v);
 
     auto start_serial = currentTime();
-    TestCustomTypeBuilder testCustomTypeBuilder(builder);
-    testCustomTypeBuilder.add_test_long(key);
-    testCustomTypeBuilder.add_test_octet(f_octet_v);
-    testCustomTypeBuilder.add_test_string(str_test);
-    testCustomTypeBuilder.add_test_long_seq(long_seq);
-    testCustomTypeBuilder.add_test_string_seq(str_seq);
-    testCustomTypeBuilder.add_test_double_seq(double_seq);
-    testCustomTypeBuilder.add_test_array_long_seq(array_long_seq);
-    testCustomTypeBuilder.add_seq_array_long_seq_test(seq_array_long_seq);
-
-    auto done = testCustomTypeBuilder.Finish();
-    builder.Finish(done);
+    auto testCustomType = CreateTestCustomType(builder, key, f_octet_v, long_seq, str_test, str_seq, double_seq, array_long_seq, seq_array_long_seq);
+    builder.Finish(testCustomType);
     uint8_t *buf = builder.GetBufferPointer();
     auto end_serial = currentTime();
 
-    double serialization_time = std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
+    double serialization_time = std::chrono::duration_cast<std::chrono::nanoseconds>(end_serial-start_serial).count();
 
     auto start_deserial = currentTime();
     auto test_custom_type = GetTestCustomType(buf);
     auto end_deserial = currentTime();
 
-    double deserialization_time = std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count();
+    double deserialization_time = std::chrono::duration_cast<std::chrono::nanoseconds>(end_deserial-start_deserial).count();
 
     if(key == 0) {
         cout << "Serialized Message Size: " << builder.GetSize() << endl;
-        cout << test_custom_type->test_string()->str()->str() << endl;
+        cout << test_custom_type->test_string_seq()->string_seq()->size() << endl;
     }
 
     builder.ReleaseBufferPointer();
