@@ -57,26 +57,26 @@ include CMakeFiles/protobuf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/protobuf.dir/flags.make
 
-ProtobufCustomType.pb.h: ../ProtobufCustomType.proto
+ProtobufCustomType.pb.h: ../Protobuf/ProtobufCustomType.proto
 ProtobufCustomType.pb.h: /usr/local/bin/protoc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running cpp protocol buffer compiler on ProtobufCustomType.proto"
-	/usr/local/bin/protoc --cpp_out /home/zhuangwei/Desktop/Serialization/cmake-build-debug -I /home/zhuangwei/Desktop/Serialization /home/zhuangwei/Desktop/Serialization/ProtobufCustomType.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running cpp protocol buffer compiler on Protobuf/ProtobufCustomType.proto"
+	/usr/local/bin/protoc --cpp_out /home/zhuangwei/Desktop/Serialization/cmake-build-debug -I /home/zhuangwei/Desktop/Serialization/Protobuf /home/zhuangwei/Desktop/Serialization/Protobuf/ProtobufCustomType.proto
 
 ProtobufCustomType.pb.cc: ProtobufCustomType.pb.h
 	@$(CMAKE_COMMAND) -E touch_nocreate ProtobufCustomType.pb.cc
 
-CMakeFiles/protobuf.dir/protobuf_main.cpp.o: CMakeFiles/protobuf.dir/flags.make
-CMakeFiles/protobuf.dir/protobuf_main.cpp.o: ../protobuf_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/protobuf.dir/protobuf_main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protobuf.dir/protobuf_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/protobuf_main.cpp
+CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o: CMakeFiles/protobuf.dir/flags.make
+CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o: ../Protobuf/protobuf_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/Protobuf/protobuf_main.cpp
 
-CMakeFiles/protobuf.dir/protobuf_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protobuf.dir/protobuf_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/protobuf_main.cpp > CMakeFiles/protobuf.dir/protobuf_main.cpp.i
+CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/Protobuf/protobuf_main.cpp > CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.i
 
-CMakeFiles/protobuf.dir/protobuf_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protobuf.dir/protobuf_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/protobuf_main.cpp -o CMakeFiles/protobuf.dir/protobuf_main.cpp.s
+CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/Protobuf/protobuf_main.cpp -o CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.s
 
 CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o: CMakeFiles/protobuf.dir/flags.make
 CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o: ProtobufCustomType.pb.cc
@@ -93,13 +93,13 @@ CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.s: cmake_force
 
 # Object files for target protobuf
 protobuf_OBJECTS = \
-"CMakeFiles/protobuf.dir/protobuf_main.cpp.o" \
+"CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o" \
 "CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o"
 
 # External object files for target protobuf
 protobuf_EXTERNAL_OBJECTS =
 
-protobuf: CMakeFiles/protobuf.dir/protobuf_main.cpp.o
+protobuf: CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o
 protobuf: CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o
 protobuf: CMakeFiles/protobuf.dir/build.make
 protobuf: /usr/local/lib/libprotobuf.so

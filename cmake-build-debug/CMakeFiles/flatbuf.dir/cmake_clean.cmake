@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o"
+  "CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o"
   "flatbuf"
   "flatbuf.pdb"
 )

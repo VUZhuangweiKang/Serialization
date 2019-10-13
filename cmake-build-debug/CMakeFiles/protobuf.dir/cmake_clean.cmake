@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o"
   "CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o"
-  "CMakeFiles/protobuf.dir/protobuf_main.cpp.o"
   "ProtobufCustomType.pb.cc"
   "ProtobufCustomType.pb.h"
   "protobuf"

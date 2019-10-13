@@ -3,7 +3,7 @@
 //
 
 #include "TestCustomType.capnp.h"
-#include "utl.cpp"
+#include "../utl.cpp"
 #include "TestPipe.cpp"
 
 using namespace capnp;

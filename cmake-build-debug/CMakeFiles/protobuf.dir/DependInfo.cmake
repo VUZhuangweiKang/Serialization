@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zhuangwei/Desktop/Serialization/Protobuf/protobuf_main.cpp" "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o"
   "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/ProtobufCustomType.pb.cc" "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o"
-  "/home/zhuangwei/Desktop/Serialization/protobuf_main.cpp" "/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles/protobuf.dir/protobuf_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

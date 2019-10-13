@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o  -o flatbuf 
+/usr/bin/c++  -g   CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o  -o flatbuf 

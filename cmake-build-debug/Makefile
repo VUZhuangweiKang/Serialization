@@ -162,6 +162,141 @@ protobuf/fast:
 	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/build
 .PHONY : protobuf/fast
 
+CapnProto/TestCustomType.capnp.o: CapnProto/TestCustomType.capnp.c++.o
+
+.PHONY : CapnProto/TestCustomType.capnp.o
+
+# target to build an object file
+CapnProto/TestCustomType.capnp.c++.o:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/CapnProto/TestCustomType.capnp.c++.o
+.PHONY : CapnProto/TestCustomType.capnp.c++.o
+
+CapnProto/TestCustomType.capnp.i: CapnProto/TestCustomType.capnp.c++.i
+
+.PHONY : CapnProto/TestCustomType.capnp.i
+
+# target to preprocess a source file
+CapnProto/TestCustomType.capnp.c++.i:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/CapnProto/TestCustomType.capnp.c++.i
+.PHONY : CapnProto/TestCustomType.capnp.c++.i
+
+CapnProto/TestCustomType.capnp.s: CapnProto/TestCustomType.capnp.c++.s
+
+.PHONY : CapnProto/TestCustomType.capnp.s
+
+# target to generate assembly for a file
+CapnProto/TestCustomType.capnp.c++.s:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/CapnProto/TestCustomType.capnp.c++.s
+.PHONY : CapnProto/TestCustomType.capnp.c++.s
+
+CapnProto/capnproto_main.o: CapnProto/capnproto_main.cpp.o
+
+.PHONY : CapnProto/capnproto_main.o
+
+# target to build an object file
+CapnProto/capnproto_main.cpp.o:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/CapnProto/capnproto_main.cpp.o
+.PHONY : CapnProto/capnproto_main.cpp.o
+
+CapnProto/capnproto_main.i: CapnProto/capnproto_main.cpp.i
+
+.PHONY : CapnProto/capnproto_main.i
+
+# target to preprocess a source file
+CapnProto/capnproto_main.cpp.i:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/CapnProto/capnproto_main.cpp.i
+.PHONY : CapnProto/capnproto_main.cpp.i
+
+CapnProto/capnproto_main.s: CapnProto/capnproto_main.cpp.s
+
+.PHONY : CapnProto/capnproto_main.s
+
+# target to generate assembly for a file
+CapnProto/capnproto_main.cpp.s:
+	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/CapnProto/capnproto_main.cpp.s
+.PHONY : CapnProto/capnproto_main.cpp.s
+
+Flatbuffers/flatbuffer_main.o: Flatbuffers/flatbuffer_main.cpp.o
+
+.PHONY : Flatbuffers/flatbuffer_main.o
+
+# target to build an object file
+Flatbuffers/flatbuffer_main.cpp.o:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o
+.PHONY : Flatbuffers/flatbuffer_main.cpp.o
+
+Flatbuffers/flatbuffer_main.i: Flatbuffers/flatbuffer_main.cpp.i
+
+.PHONY : Flatbuffers/flatbuffer_main.i
+
+# target to preprocess a source file
+Flatbuffers/flatbuffer_main.cpp.i:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.i
+.PHONY : Flatbuffers/flatbuffer_main.cpp.i
+
+Flatbuffers/flatbuffer_main.s: Flatbuffers/flatbuffer_main.cpp.s
+
+.PHONY : Flatbuffers/flatbuffer_main.s
+
+# target to generate assembly for a file
+Flatbuffers/flatbuffer_main.cpp.s:
+	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.s
+.PHONY : Flatbuffers/flatbuffer_main.cpp.s
+
+MessagePack/msgpack_main.o: MessagePack/msgpack_main.cpp.o
+
+.PHONY : MessagePack/msgpack_main.o
+
+# target to build an object file
+MessagePack/msgpack_main.cpp.o:
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o
+.PHONY : MessagePack/msgpack_main.cpp.o
+
+MessagePack/msgpack_main.i: MessagePack/msgpack_main.cpp.i
+
+.PHONY : MessagePack/msgpack_main.i
+
+# target to preprocess a source file
+MessagePack/msgpack_main.cpp.i:
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.i
+.PHONY : MessagePack/msgpack_main.cpp.i
+
+MessagePack/msgpack_main.s: MessagePack/msgpack_main.cpp.s
+
+.PHONY : MessagePack/msgpack_main.s
+
+# target to generate assembly for a file
+MessagePack/msgpack_main.cpp.s:
+	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.s
+.PHONY : MessagePack/msgpack_main.cpp.s
+
+Protobuf/protobuf_main.o: Protobuf/protobuf_main.cpp.o
+
+.PHONY : Protobuf/protobuf_main.o
+
+# target to build an object file
+Protobuf/protobuf_main.cpp.o:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o
+.PHONY : Protobuf/protobuf_main.cpp.o
+
+Protobuf/protobuf_main.i: Protobuf/protobuf_main.cpp.i
+
+.PHONY : Protobuf/protobuf_main.i
+
+# target to preprocess a source file
+Protobuf/protobuf_main.cpp.i:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.i
+.PHONY : Protobuf/protobuf_main.cpp.i
+
+Protobuf/protobuf_main.s: Protobuf/protobuf_main.cpp.s
+
+.PHONY : Protobuf/protobuf_main.s
+
+# target to generate assembly for a file
+Protobuf/protobuf_main.cpp.s:
+	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.s
+.PHONY : Protobuf/protobuf_main.cpp.s
+
 ProtobufCustomType.pb.o: ProtobufCustomType.pb.cc.o
 
 .PHONY : ProtobufCustomType.pb.o
@@ -189,141 +324,6 @@ ProtobufCustomType.pb.cc.s:
 	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.s
 .PHONY : ProtobufCustomType.pb.cc.s
 
-TestCustomType.capnp.o: TestCustomType.capnp.c++.o
-
-.PHONY : TestCustomType.capnp.o
-
-# target to build an object file
-TestCustomType.capnp.c++.o:
-	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.o
-.PHONY : TestCustomType.capnp.c++.o
-
-TestCustomType.capnp.i: TestCustomType.capnp.c++.i
-
-.PHONY : TestCustomType.capnp.i
-
-# target to preprocess a source file
-TestCustomType.capnp.c++.i:
-	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.i
-.PHONY : TestCustomType.capnp.c++.i
-
-TestCustomType.capnp.s: TestCustomType.capnp.c++.s
-
-.PHONY : TestCustomType.capnp.s
-
-# target to generate assembly for a file
-TestCustomType.capnp.c++.s:
-	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.s
-.PHONY : TestCustomType.capnp.c++.s
-
-capnproto_main.o: capnproto_main.cpp.o
-
-.PHONY : capnproto_main.o
-
-# target to build an object file
-capnproto_main.cpp.o:
-	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.o
-.PHONY : capnproto_main.cpp.o
-
-capnproto_main.i: capnproto_main.cpp.i
-
-.PHONY : capnproto_main.i
-
-# target to preprocess a source file
-capnproto_main.cpp.i:
-	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.i
-.PHONY : capnproto_main.cpp.i
-
-capnproto_main.s: capnproto_main.cpp.s
-
-.PHONY : capnproto_main.s
-
-# target to generate assembly for a file
-capnproto_main.cpp.s:
-	$(MAKE) -f CMakeFiles/capnproto.dir/build.make CMakeFiles/capnproto.dir/capnproto_main.cpp.s
-.PHONY : capnproto_main.cpp.s
-
-flatbuffer_main.o: flatbuffer_main.cpp.o
-
-.PHONY : flatbuffer_main.o
-
-# target to build an object file
-flatbuffer_main.cpp.o:
-	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o
-.PHONY : flatbuffer_main.cpp.o
-
-flatbuffer_main.i: flatbuffer_main.cpp.i
-
-.PHONY : flatbuffer_main.i
-
-# target to preprocess a source file
-flatbuffer_main.cpp.i:
-	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.i
-.PHONY : flatbuffer_main.cpp.i
-
-flatbuffer_main.s: flatbuffer_main.cpp.s
-
-.PHONY : flatbuffer_main.s
-
-# target to generate assembly for a file
-flatbuffer_main.cpp.s:
-	$(MAKE) -f CMakeFiles/flatbuf.dir/build.make CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.s
-.PHONY : flatbuffer_main.cpp.s
-
-msgpack_main.o: msgpack_main.cpp.o
-
-.PHONY : msgpack_main.o
-
-# target to build an object file
-msgpack_main.cpp.o:
-	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/msgpack_main.cpp.o
-.PHONY : msgpack_main.cpp.o
-
-msgpack_main.i: msgpack_main.cpp.i
-
-.PHONY : msgpack_main.i
-
-# target to preprocess a source file
-msgpack_main.cpp.i:
-	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/msgpack_main.cpp.i
-.PHONY : msgpack_main.cpp.i
-
-msgpack_main.s: msgpack_main.cpp.s
-
-.PHONY : msgpack_main.s
-
-# target to generate assembly for a file
-msgpack_main.cpp.s:
-	$(MAKE) -f CMakeFiles/msgpack.dir/build.make CMakeFiles/msgpack.dir/msgpack_main.cpp.s
-.PHONY : msgpack_main.cpp.s
-
-protobuf_main.o: protobuf_main.cpp.o
-
-.PHONY : protobuf_main.o
-
-# target to build an object file
-protobuf_main.cpp.o:
-	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/protobuf_main.cpp.o
-.PHONY : protobuf_main.cpp.o
-
-protobuf_main.i: protobuf_main.cpp.i
-
-.PHONY : protobuf_main.i
-
-# target to preprocess a source file
-protobuf_main.cpp.i:
-	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/protobuf_main.cpp.i
-.PHONY : protobuf_main.cpp.i
-
-protobuf_main.s: protobuf_main.cpp.s
-
-.PHONY : protobuf_main.s
-
-# target to generate assembly for a file
-protobuf_main.cpp.s:
-	$(MAKE) -f CMakeFiles/protobuf.dir/build.make CMakeFiles/protobuf.dir/protobuf_main.cpp.s
-.PHONY : protobuf_main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -336,24 +336,24 @@ help:
 	@echo "... capnproto"
 	@echo "... msgpack"
 	@echo "... protobuf"
+	@echo "... CapnProto/TestCustomType.capnp.o"
+	@echo "... CapnProto/TestCustomType.capnp.i"
+	@echo "... CapnProto/TestCustomType.capnp.s"
+	@echo "... CapnProto/capnproto_main.o"
+	@echo "... CapnProto/capnproto_main.i"
+	@echo "... CapnProto/capnproto_main.s"
+	@echo "... Flatbuffers/flatbuffer_main.o"
+	@echo "... Flatbuffers/flatbuffer_main.i"
+	@echo "... Flatbuffers/flatbuffer_main.s"
+	@echo "... MessagePack/msgpack_main.o"
+	@echo "... MessagePack/msgpack_main.i"
+	@echo "... MessagePack/msgpack_main.s"
+	@echo "... Protobuf/protobuf_main.o"
+	@echo "... Protobuf/protobuf_main.i"
+	@echo "... Protobuf/protobuf_main.s"
 	@echo "... ProtobufCustomType.pb.o"
 	@echo "... ProtobufCustomType.pb.i"
 	@echo "... ProtobufCustomType.pb.s"
-	@echo "... TestCustomType.capnp.o"
-	@echo "... TestCustomType.capnp.i"
-	@echo "... TestCustomType.capnp.s"
-	@echo "... capnproto_main.o"
-	@echo "... capnproto_main.i"
-	@echo "... capnproto_main.s"
-	@echo "... flatbuffer_main.o"
-	@echo "... flatbuffer_main.i"
-	@echo "... flatbuffer_main.s"
-	@echo "... msgpack_main.o"
-	@echo "... msgpack_main.i"
-	@echo "... msgpack_main.s"
-	@echo "... protobuf_main.o"
-	@echo "... protobuf_main.i"
-	@echo "... protobuf_main.s"
 .PHONY : help
 
 

@@ -7,17 +7,17 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(Protobuf REQUIRED)
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ProtobufCustomType.proto)
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS Protobuf/ProtobufCustomType.proto)
 
 # Cap'n proto
 find_package(CapnProto CONFIG REQUIRED)
-capnp_generate_cpp(TestCustomTypeSources TestCustomTypeHeaders TestCustomType.capnp)
+capnp_generate_cpp(TestCustomTypeSources TestCustomTypeHeaders CapnProto/TestCustomType.capnp)
 
 # executables
-add_executable(msgpack msgpack_main.cpp)
-add_executable(protobuf protobuf_main.cpp ProtobufCustomType.proto ${PROTO_SRCS} ${PROTO_HDRS})
-add_executable(capnproto capnproto_main.cpp ${TestCustomTypeSources})
-add_executable(flatbuf flatbuffer_main.cpp)
+add_executable(msgpack MessagePack/msgpack_main.cpp)
+add_executable(protobuf Protobuf/protobuf_main.cpp Protobuf/ProtobufCustomType.proto ${PROTO_SRCS} ${PROTO_HDRS})
+add_executable(capnproto CapnProto/capnproto_main.cpp ${TestCustomTypeSources})
+add_executable(flatbuf Flatbuffers/flatbuffer_main.cpp)
 
 # link libraries
 target_link_libraries(protobuf ${PROTOBUF_LIBRARY})

@@ -57,27 +57,27 @@ include CMakeFiles/flatbuf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/flatbuf.dir/flags.make
 
-CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o: CMakeFiles/flatbuf.dir/flags.make
-CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o: ../flatbuffer_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/flatbuffer_main.cpp
+CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o: CMakeFiles/flatbuf.dir/flags.make
+CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o: ../Flatbuffers/flatbuffer_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/Flatbuffers/flatbuffer_main.cpp
 
-CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/flatbuffer_main.cpp > CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.i
+CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/Flatbuffers/flatbuffer_main.cpp > CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.i
 
-CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/flatbuffer_main.cpp -o CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.s
+CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/Flatbuffers/flatbuffer_main.cpp -o CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.s
 
 # Object files for target flatbuf
 flatbuf_OBJECTS = \
-"CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o"
+"CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o"
 
 # External object files for target flatbuf
 flatbuf_EXTERNAL_OBJECTS =
 
-flatbuf: CMakeFiles/flatbuf.dir/flatbuffer_main.cpp.o
+flatbuf: CMakeFiles/flatbuf.dir/Flatbuffers/flatbuffer_main.cpp.o
 flatbuf: CMakeFiles/flatbuf.dir/build.make
 flatbuf: CMakeFiles/flatbuf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable flatbuf"

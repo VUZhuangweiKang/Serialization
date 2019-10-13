@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/protobuf.dir/protobuf_main.cpp.o CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o  -o protobuf -Wl,-rpath,/usr/local/lib /usr/local/lib/libprotobuf.so 
+/usr/bin/c++  -g   CMakeFiles/protobuf.dir/Protobuf/protobuf_main.cpp.o CMakeFiles/protobuf.dir/ProtobufCustomType.pb.cc.o  -o protobuf -Wl,-rpath,/usr/local/lib /usr/local/lib/libprotobuf.so 

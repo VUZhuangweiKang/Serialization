@@ -5,7 +5,7 @@
 #include "flatbuffer_main.h"
 #include "flatbuffers/flatbuffers.h"
 #include "flatbufIDL_generated.h"
-#include "utl.cpp"
+#include "../utl.cpp"
 
 using namespace FlatBufTest;
 using namespace std;
@@ -67,7 +67,6 @@ pair<double, double> initStruct(int32_t key) {
 
     if(key == 0) {
         cout << "Serialized Message Size: " << builder.GetSize() << endl;
-        cout << test_custom_type->test_string_seq()->string_seq()->size() << endl;
     }
 
     builder.ReleaseBufferPointer();
@@ -84,6 +83,6 @@ int main() {
         serialization_time += result.first;
         deserialization_time += result.second;
     }
-    cout << "Avg Serialization Time: " << serialization_time/NUM_INTER << endl;
-    cout << "Avg Deserialization Time: " << deserialization_time/NUM_INTER << endl;
+    cout << "Avg Serialization Time(ns): " << serialization_time/NUM_INTER << endl;
+    cout << "Avg Deserialization Time(ns): " << deserialization_time/NUM_INTER << endl;
 }

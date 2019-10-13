@@ -26,9 +26,6 @@ cd capnproto-c++-0.7.0
 make -j6 check
 sudo make install
 
-export PATH=$PREFIX/bin:$PATH
-
-
 # install flatbuffers
 git clone https://github.com/google/flatbuffers.git
 cd flatbuffers

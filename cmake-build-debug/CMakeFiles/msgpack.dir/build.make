@@ -57,27 +57,27 @@ include CMakeFiles/msgpack.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/msgpack.dir/flags.make
 
-CMakeFiles/msgpack.dir/msgpack_main.cpp.o: CMakeFiles/msgpack.dir/flags.make
-CMakeFiles/msgpack.dir/msgpack_main.cpp.o: ../msgpack_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/msgpack.dir/msgpack_main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/msgpack.dir/msgpack_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/msgpack_main.cpp
+CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o: CMakeFiles/msgpack.dir/flags.make
+CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o: ../MessagePack/msgpack_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o -c /home/zhuangwei/Desktop/Serialization/MessagePack/msgpack_main.cpp
 
-CMakeFiles/msgpack.dir/msgpack_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgpack.dir/msgpack_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/msgpack_main.cpp > CMakeFiles/msgpack.dir/msgpack_main.cpp.i
+CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhuangwei/Desktop/Serialization/MessagePack/msgpack_main.cpp > CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.i
 
-CMakeFiles/msgpack.dir/msgpack_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgpack.dir/msgpack_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/msgpack_main.cpp -o CMakeFiles/msgpack.dir/msgpack_main.cpp.s
+CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhuangwei/Desktop/Serialization/MessagePack/msgpack_main.cpp -o CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.s
 
 # Object files for target msgpack
 msgpack_OBJECTS = \
-"CMakeFiles/msgpack.dir/msgpack_main.cpp.o"
+"CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o"
 
 # External object files for target msgpack
 msgpack_EXTERNAL_OBJECTS =
 
-msgpack: CMakeFiles/msgpack.dir/msgpack_main.cpp.o
+msgpack: CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o
 msgpack: CMakeFiles/msgpack.dir/build.make
 msgpack: CMakeFiles/msgpack.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhuangwei/Desktop/Serialization/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable msgpack"

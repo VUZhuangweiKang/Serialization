@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/capnproto.dir/TestCustomType.capnp.c++.o"
-  "CMakeFiles/capnproto.dir/capnproto_main.cpp.o"
-  "TestCustomType.capnp.c++"
-  "TestCustomType.capnp.h"
+  "CMakeFiles/capnproto.dir/CapnProto/TestCustomType.capnp.c++.o"
+  "CMakeFiles/capnproto.dir/CapnProto/capnproto_main.cpp.o"
+  "CapnProto/TestCustomType.capnp.c++"
+  "CapnProto/TestCustomType.capnp.h"
   "capnproto"
   "capnproto.pdb"
 )

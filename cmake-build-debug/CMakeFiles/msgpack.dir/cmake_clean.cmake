@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/msgpack.dir/msgpack_main.cpp.o"
+  "CMakeFiles/msgpack.dir/MessagePack/msgpack_main.cpp.o"
   "msgpack"
   "msgpack.pdb"
 )
