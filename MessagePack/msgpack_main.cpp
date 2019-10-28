@@ -10,19 +10,19 @@ TestCustomType initStruct(int32_t msgID) {
         customType.test_octet[i] = (octet) i;
     }
 
-    sprintf(customType.test_string.test_string, "Hello world!");
+    sprintf(customType.test_string.str, "Hello world!");
 
     for (int j = 0; j < SIZE_TEST_SEQ; ++j) {
-        customType.test_long_seq.test_long_seq[j] = customType.test_long;
-        customType.test_string_seq.test_string_seq[j] = customType.test_string;
-        customType.test_double_seq.test_double_seq[j] = (double)j;
+        customType.test_long_seq.long_seq[j] = customType.test_long;
+        customType.test_string_seq.string_seq[j] = customType.test_string;
+        customType.test_double_seq.double_seq[j] = (double)j;
     }
 
-    for (auto & k : customType.test_array_long_seq.test_array_long_seq) {
+    for (auto & k : customType.test_array_long_seq.array_long_seq) {
         k = customType.test_long_seq;
     }
 
-    for (auto & l : customType.seq_array_long_seq_test.seq_array_long_seq_test) {
+    for (auto & l : customType.seq_array_long_seq_test.seq_array_long_seq) {
         l = customType.test_array_long_seq;
     }
 
@@ -30,7 +30,7 @@ TestCustomType initStruct(int32_t msgID) {
 }
 
 void showMsgSize() {
-    TestCustomType sample = initStruct(0);
+    TestCustomType sample = initStruct(1);
     cout << "sample = " << sizeof(sample) << endl;
     cout << "sample.test_long = " << sizeof(sample.test_long) << endl;
     cout << "sample.test_octet = " << sizeof(sample.test_octet) << endl;
@@ -42,45 +42,43 @@ void showMsgSize() {
     cout << "sample.seq_array_long_seq_test = " << sizeof(sample.seq_array_long_seq_test) << endl;
 }
 
-double serialization(int32_t i) {
-    size_t maxSerializeSample = 0;
-    TestCustomType my_struct = initStruct(i);
-    sbuffer temp_sbuf;
-    pack(temp_sbuf, my_struct);
-    maxSerializeSample = temp_sbuf.size();
+double obtain_serialization_time_cost() {
+    /* determine required buffer size */
+    TestCustomType testData = initStruct(1);
+    sbuffer temp;
+    pack(temp, testData);
+    unsigned long bufferSize = temp.size();
+    temp.release();
 
-    sbuffer sbuf(maxSerializeSample);
+    sbuffer sbuf(bufferSize); // allocate buffer
     auto start_serial = currentTime();
-    pack(sbuf, my_struct);
+    for (size_t i = 0; i < NUM_INTER; i++)
+    {
+        pack(sbuf, testData);
+    }
     auto end_serial = currentTime();
     sbuf.release(); // release buffer
-    return std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count()/NUM_INTER;
 }
 
-double deserialization(int32_t i) {
-    TestCustomType my_struct = initStruct(i);
+double obtain_deserialization_time_cost() {
     sbuffer sbuf;
-    pack(sbuf, my_struct);
-
+    TestCustomType testData = initStruct(1);
+    pack(sbuf, testData);
     unpacked msg; // deserialize message
     auto start_deserial = currentTime();
-    unpack(&msg, sbuf.data(), sbuf.size());
+    for (size_t i = 0; i < NUM_INTER; i++)
+    {
+        unpack(&msg, sbuf.data(), sbuf.size());
+    }
     auto end_deserial = currentTime();
     sbuf.release(); // release buffer
-    return std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count()/NUM_INTER;
 }
 
 int main() {
-    double serial_time = 0.0, deserial_time = 0.0;
-
-    for (int i = 0; i < NUM_INTER; ++i) {
-        serial_time += serialization(i);
-        deserial_time += deserialization(i);
-    }
-
-    double avg_serial_time = serial_time/NUM_INTER;
-    double avg_deserial_time = deserial_time/NUM_INTER;
-
+    double avg_serial_time = obtain_serialization_time_cost();
+    double avg_deserial_time = obtain_deserialization_time_cost();
     cout << "Serialization / Deserialization : " << avg_serial_time << " / " << avg_deserial_time << " us" << endl;
     showMsgSize();
     return 0;

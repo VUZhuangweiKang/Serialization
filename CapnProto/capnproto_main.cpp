@@ -23,10 +23,10 @@ TestCustomType::Builder initStruct(MallocMessageBuilder &message, int32_t key) {
     List<double_t>::Builder double_seq = customType.initTestDoubleSeq().initDoubleSeq(SIZE_TEST_SEQ);
 
     for (int j = 0; j < SIZE_TEST_SEQ; ++j) {
-        long_seq.set(j, (int32_t)key);
+        long_seq.set(j, (int32_t)j);
         StringTest::Builder str = str_seq[j];
         str.setStr(customType.getTestString().getStr());
-        double_seq.set(j, (double_t)key);
+        double_seq.set(j, (double_t)j);
     }
 
     List<LongSeqTest>::Builder array_long_seq = customType.initTestArrayLongSeq().initArrayLongSeq(SIZE_TEST_ARRAY_SEQ);
@@ -58,50 +58,40 @@ void showMsgSize() {
     cout << "sample.seq_array_long_seq_test = " << reader.getSeqArrayLongSeqTest().totalSize().wordCount << endl;
 }
 
-void showMsg(TestCustomType::Reader reader) {
-    char *temp = (char *)malloc(1000000);
-
-    reader.getTestString().toString().flattenTo(temp);
-    cout << "sample.test_string = " << temp << endl;
-
-    reader.getTestStringSeq().toString().flattenTo(temp);
-    cout << "sample.test_string_seq = " << temp << endl;
+double obtain_serialization_time_cost() {
+    MallocMessageBuilder message;
+    initStruct(message, 0);
+    auto serializedSize = computeSerializedSizeInWords(message);
+    double time_cost = 0;
+    for (int i = 0; i < NUM_INTER; ++i) {
+        TestPipe writer_buf(serializedSize);
+        auto start_serial = currentTime();
+        writePackedMessage(writer_buf, message);
+        auto end_serial = currentTime();
+        time_cost += std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
+    }
+    return time_cost/NUM_INTER;
 }
 
-double serialization(int32_t i) {
+double obtain_deserialization_time_cost() {
     MallocMessageBuilder message;
-    initStruct(message, i);
-    TestPipe writer_buf(computeSerializedSizeInWords(message));
-
-    auto start_serial = currentTime();
-    writePackedMessage(writer_buf, message);
-    auto end_serial = currentTime();
-    return std::chrono::duration_cast<std::chrono::microseconds>(end_serial-start_serial).count();
-}
-
-double deserialization(int32_t i) {
-    MallocMessageBuilder message;
-    initStruct(message, i);
+    initStruct(message, 0);
     TestPipe buffer;
-    writePackedMessage(buffer, message);
 
-    auto start_deserial = currentTime();
-    PackedMessageReader reader(buffer);
-    auto end_deserial = currentTime();
-    return std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count();
+    double time_cost = 0;
+    for (int i = 0; i < NUM_INTER; ++i) {
+        writePackedMessage(buffer, message);
+        auto start_deserial = currentTime();
+        PackedMessageReader reader(buffer);
+        auto end_deserial = currentTime();
+        time_cost += std::chrono::duration_cast<std::chrono::microseconds>(end_deserial-start_deserial).count();
+    }
+    return time_cost/NUM_INTER;
 }
 
 int main() {
-    double serial_time = 0.0, deserial_time = 0.0;
-
-    for (int i = 0; i < NUM_INTER; ++i) {
-        serial_time += serialization(i);
-        deserial_time += deserialization(i);
-    }
-
-    double avg_serial_time = serial_time/NUM_INTER;
-    double avg_deserial_time = deserial_time/NUM_INTER;
-
+    double avg_serial_time = obtain_serialization_time_cost();
+    double avg_deserial_time = obtain_deserialization_time_cost();
     cout << "Serialization / Deserialization : " << avg_serial_time << " / " << avg_deserial_time << " us" << endl;
     showMsgSize();
     return 0;

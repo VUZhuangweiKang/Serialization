@@ -1,0 +1,6 @@
+/home/zhuangwei/Desktop/Serialization/build/CMakeFiles/rebuild_cache.dir
+/home/zhuangwei/Desktop/Serialization/build/CMakeFiles/edit_cache.dir
+/home/zhuangwei/Desktop/Serialization/build/CMakeFiles/flatbuf.dir
+/home/zhuangwei/Desktop/Serialization/build/CMakeFiles/capnproto.dir
+/home/zhuangwei/Desktop/Serialization/build/CMakeFiles/msgpack.dir
+/home/zhuangwei/Desktop/Serialization/build/CMakeFiles/protobuf.dir

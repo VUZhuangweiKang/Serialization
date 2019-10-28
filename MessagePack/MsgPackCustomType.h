@@ -11,33 +11,33 @@
 typedef unsigned char octet;
 
 typedef struct LongSeqTest {
-    int32_t test_long_seq[SIZE_TEST_SEQ];
-    MSGPACK_DEFINE(test_long_seq);
+    int32_t long_seq[SIZE_TEST_SEQ];
+    MSGPACK_DEFINE(long_seq);
 }LongSeqTest;
 
 typedef struct DoubleSeqTest {
-    double test_double_seq[SIZE_TEST_SEQ];
-    MSGPACK_DEFINE(test_double_seq);
+    double double_seq[SIZE_TEST_SEQ];
+    MSGPACK_DEFINE(double_seq);
 }DoubleSeqTest;
 
 typedef struct StringTest {
-    char test_string[SIZE_TEST_STR];
-    MSGPACK_DEFINE(test_string);
+    char str[SIZE_TEST_STR];
+    MSGPACK_DEFINE(str);
 }StringTest;
 
 typedef struct StringSeqTest {
-    StringTest test_string_seq[SIZE_TEST_SEQ];
-    MSGPACK_DEFINE(test_string_seq);
+    StringTest string_seq[SIZE_TEST_SEQ];
+    MSGPACK_DEFINE(string_seq);
 }StringSeqTest;
 
 typedef struct ArrayLongSeqTest {
-    LongSeqTest test_array_long_seq[SIZE_TEST_ARRAY_SEQ];
-    MSGPACK_DEFINE(test_array_long_seq);
+    LongSeqTest array_long_seq[SIZE_TEST_ARRAY_SEQ];
+    MSGPACK_DEFINE(array_long_seq);
 }ArrayLongSeqTest;
 
 typedef struct SeqArrayLongSeqTest {
-    ArrayLongSeqTest seq_array_long_seq_test[SIZE_TEST_SEQ_ARRAY_SEQ];
-    MSGPACK_DEFINE(seq_array_long_seq_test);
+    ArrayLongSeqTest seq_array_long_seq[SIZE_TEST_SEQ_ARRAY_SEQ];
+    MSGPACK_DEFINE(seq_array_long_seq);
 }SeqArrayLongSeqTest;
 
 typedef struct TestCustomType {
