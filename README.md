@@ -39,3 +39,4 @@ struct TestCustomType {
 ```
 ## Experiment Results
 ![results](./SerializationTest.png)
+*Serialization Test: This figure shows the average time taken to (de)serialize a 14 KB sample 1000 times. This test was performed 5 times on the ARM cluster.*
